@@ -15,9 +15,7 @@ class TabBarViewController: UITabBarController {
         configTaBar()
     }
     
-    private func createNavigationController(for rootViewController: UIViewController,
-                                     title: String,
-                                     image: UIImage) -> UIViewController {
+    private func createNavigationController(for rootViewController: UIViewController, title: String, image: UIImage) -> UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
@@ -30,7 +28,7 @@ class TabBarViewController: UITabBarController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    func setupTabBar() {
+    private func setupTabBar() {
         viewControllers = [
             createNavigationController(for: HomeViewController(), title: "Home", image: UIImage(systemName: "house") ?? UIImage()),
             createNavigationController(for: HomeViewController(), title: "Stats", image: UIImage(systemName: "flag.checkered.2.crossed") ?? UIImage()),
@@ -38,14 +36,15 @@ class TabBarViewController: UITabBarController {
             createNavigationController(for: HomeViewController(), title: "Seasons", image: UIImage(systemName: "doc.text.magnifyingglass") ?? UIImage()),
         ]}
     
-    func configTaBar() {
+    private func configTaBar() {
         tabBar.layer.borderWidth = 0.2
         tabBar.layer.borderColor = UIColor.black.cgColor
         tabBar.backgroundColor = .black
         tabBar.tintColor = .red
-        tabBar.barTintColor = .white
+        tabBar.barTintColor = .black
         tabBar.isTranslucent = false
     }
+    
 
 
 }
