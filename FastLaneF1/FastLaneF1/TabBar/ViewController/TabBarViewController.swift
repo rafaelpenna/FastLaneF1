@@ -31,9 +31,9 @@ class TabBarViewController: UITabBarController {
     private func setupTabBar() {
         viewControllers = [
             createNavigationController(for: HomeViewController(), title: "Home", image: UIImage(systemName: "house") ?? UIImage()),
-            createNavigationController(for: HomeViewController(), title: "Stats", image: UIImage(systemName: "flag.checkered.2.crossed") ?? UIImage()),
-            createNavigationController(for: HomeViewController(), title: "Drivers", image: UIImage(systemName: "crown") ?? UIImage()),
-            createNavigationController(for: HomeViewController(), title: "Seasons", image: UIImage(systemName: "doc.text.magnifyingglass") ?? UIImage()),
+            createNavigationController(for: HomeViewController(), title: "Standings", image: UIImage(systemName: "trophy.fill") ?? UIImage()),
+            createNavigationController(for: HomeViewController(), title: "Drivers Stats", image: UIImage(systemName: "speedometer") ?? UIImage()),
+            createNavigationController(for: HomeViewController(), title: "Schedule", image: UIImage(systemName: "doc.text.magnifyingglass") ?? UIImage()),
         ]}
     
     private func configTaBar() {

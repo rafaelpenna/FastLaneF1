@@ -7,11 +7,11 @@
 
 import UIKit
 
-class UpcomingEventTableViewCell: UIView {
+class UpcomingEventCell: UITableViewCell {
     
-    static let identifier = String(describing: UpcomingEventTableViewCell.self)
+    static let identifier = String(describing: UpcomingEventCell.self)
     
-    var upcomingabel: UILabel = {
+    var upcomingLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "UPCOMING EVENT"
@@ -19,35 +19,31 @@ class UpcomingEventTableViewCell: UIView {
         label.font = UIFont.systemFont(ofSize: 20)
         label.textAlignment = .center
         label.numberOfLines = 0
+        label.layer.backgroundColor = UIColor.darkGray.cgColor
         return label
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    public func configure() {
         addSubviews()
         configConstraintsUpcomingEvent()
         backgroundColor()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     private func addSubviews() {
-        addSubview(upcomingabel)
+        addSubview(upcomingLabel)
     }
     
     private func backgroundColor() {
-        backgroundColor = .red
+        backgroundColor = .darkColorApp
     }
     
     private func configConstraintsUpcomingEvent() {
         NSLayoutConstraint.activate([
                 
-            upcomingabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            upcomingabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -5),
-            upcomingabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 5),
-            upcomingabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+            upcomingLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            upcomingLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            upcomingLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            upcomingLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
         ])
     }
 }

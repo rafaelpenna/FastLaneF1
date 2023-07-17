@@ -10,19 +10,15 @@ import UIKit
 
 class HomeScreenView: UIView {
     
-    lazy var backgroundView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .darkColorApp
-        return view
-    }()
-    
     lazy var homeTableView: UITableView = {
         let homeTableView = UITableView()
         homeTableView.translatesAutoresizingMaskIntoConstraints = false
         homeTableView.separatorStyle = .none
         homeTableView.backgroundColor = .darkColorApp
-        homeTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "HomeTableViewCell")
+        homeTableView.register(UpcomingEventCell.self, forCellReuseIdentifier: UpcomingEventCell.identifier)
+        homeTableView.register(LatestResultCell.self, forCellReuseIdentifier: LatestResultCell.identifier)
+        homeTableView.register(ChampionshipStandingsCell.self, forCellReuseIdentifier: ChampionshipStandingsCell.identifier)
+        homeTableView.register(ScheduleCell.self, forCellReuseIdentifier: ScheduleCell.identifier)
         return homeTableView
     }()
     
@@ -38,7 +34,6 @@ class HomeScreenView: UIView {
     }
     
     private func addElements() {
-        addSubview(backgroundView)
         addSubview(homeTableView)
     }
     
@@ -53,12 +48,8 @@ class HomeScreenView: UIView {
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            homeTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            homeTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
             homeTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             homeTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             homeTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
