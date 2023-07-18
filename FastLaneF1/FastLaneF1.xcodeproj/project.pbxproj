@@ -21,9 +21,38 @@
 		1C74BC432A65AEF00017F11D /* ChampionshipStandingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C74BC422A65AEF00017F11D /* ChampionshipStandingsCell.swift */; };
 		1C74BC452A65B0380017F11D /* LatestResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C74BC442A65B0380017F11D /* LatestResultCell.swift */; };
 		1C74BC472A65B2910017F11D /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C74BC462A65B2910017F11D /* ScheduleCell.swift */; };
+		1C98C7F72A6717F400F93653 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C7F62A6717F400F93653 /* ScheduleModel.swift */; };
+		1C98C7F92A67183300F93653 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C7F82A67183300F93653 /* ScheduleViewController.swift */; };
+		1C98C7FB2A67185D00F93653 /* ScheduleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C7FA2A67185D00F93653 /* ScheduleScreen.swift */; };
+		1C98C7FD2A67188200F93653 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C7FC2A67188200F93653 /* ScheduleViewModel.swift */; };
+		1C98C7FF2A6718BF00F93653 /* ScheduleCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C7FE2A6718BF00F93653 /* ScheduleCellScreen.swift */; };
+		1C98C8012A6718E600F93653 /* ScheduleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8002A6718E600F93653 /* ScheduleCellViewModel.swift */; };
+		1C98C8032A67191900F93653 /* ScheduleCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8022A67191900F93653 /* ScheduleCustomTableViewCell.swift */; };
+		1C98C8052A67193F00F93653 /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8042A67193F00F93653 /* ScheduleService.swift */; };
+		1C98C8082A671AE700F93653 /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C98C8072A671AE700F93653 /* schedule.json */; };
+		1C98C80F2A67248900F93653 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C80E2A67248900F93653 /* EventModel.swift */; };
+		1C98C8112A6724A900F93653 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8102A6724A900F93653 /* EventViewModel.swift */; };
+		1C98C8132A6724D000F93653 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8122A6724D000F93653 /* EventViewController.swift */; };
+		1C98C8162A67251500F93653 /* EventScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8152A67251500F93653 /* EventScreen.swift */; };
+		1C98C81A2A67258300F93653 /* TableTrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8192A67258300F93653 /* TableTrackTableViewCell.swift */; };
+		1C98C81D2A6725B600F93653 /* FirstGrandPrixCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C81C2A6725B600F93653 /* FirstGrandPrixCellScreen.swift */; };
+		1C98C81F2A6725D400F93653 /* TrackImageCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C81E2A6725D400F93653 /* TrackImageCellScreen.swift */; };
+		1C98C8212A6725F100F93653 /* CircuitLenghtCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8202A6725F100F93653 /* CircuitLenghtCellScreen.swift */; };
+		1C98C8232A67261800F93653 /* RaceLapsCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8222A67261800F93653 /* RaceLapsCellScreen.swift */; };
+		1C98C8252A67263400F93653 /* RaceDistanceCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8242A67263400F93653 /* RaceDistanceCellScreen.swift */; };
+		1C98C8272A67265300F93653 /* TrackRecordCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8262A67265300F93653 /* TrackRecordCellScreen.swift */; };
+		1C98C8292A67268F00F93653 /* HeaderStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8282A67268F00F93653 /* HeaderStandings.swift */; };
+		1C98C82B2A6726AA00F93653 /* StandingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C82A2A6726AA00F93653 /* StandingsTableViewCell.swift */; };
+		1C98C82D2A6726CF00F93653 /* CustomStandingsTableViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C82C2A6726CF00F93653 /* CustomStandingsTableViewScreen.swift */; };
+		1C98C82F2A67273500F93653 /* StandingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C82E2A67273500F93653 /* StandingsService.swift */; };
+		1C98C8312A67275200F93653 /* CircuitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8302A67275200F93653 /* CircuitService.swift */; };
+		1C98C8352A6728F200F93653 /* seasonCircuitInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C98C8342A6728F200F93653 /* seasonCircuitInfo.json */; };
 		1CE86BB32A61BA8D00B4022C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE86BB22A61BA8C00B4022C /* Color.swift */; };
 		1CE86BB82A61BF6500B4022C /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE86BB72A61BF6500B4022C /* HomeScreenView.swift */; };
 		1CE86BBC2A61C4C700B4022C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE86BBB2A61C4C700B4022C /* TabBarViewController.swift */; };
+		378DB0876FE27158EB007276 /* Pods_FastLaneF1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E462BBE014CF25614D26ECD9 /* Pods_FastLaneF1.framework */; };
+		847C69646CF86C1CE70EF76F /* Pods_FastLaneF1_FastLaneF1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE6A7FB3A9536ACE1CC35B3 /* Pods_FastLaneF1_FastLaneF1UITests.framework */; };
+		B8884D379246816B74742FC0 /* Pods_FastLaneF1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A62C01F564194869D9D012D /* Pods_FastLaneF1Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BC58D03C7242CC5A3D88FE6 /* Pods-FastLaneF1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLaneF1Tests.release.xcconfig"; path = "Target Support Files/Pods-FastLaneF1Tests/Pods-FastLaneF1Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1C06DCC72A61B12400FD02FB /* FastLaneF1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastLaneF1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C06DCCA2A61B12400FD02FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C06DCCC2A61B12400FD02FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,9 +92,43 @@
 		1C74BC422A65AEF00017F11D /* ChampionshipStandingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipStandingsCell.swift; sourceTree = "<group>"; };
 		1C74BC442A65B0380017F11D /* LatestResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestResultCell.swift; sourceTree = "<group>"; };
 		1C74BC462A65B2910017F11D /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		1C98C7F62A6717F400F93653 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		1C98C7F82A67183300F93653 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		1C98C7FA2A67185D00F93653 /* ScheduleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleScreen.swift; sourceTree = "<group>"; };
+		1C98C7FC2A67188200F93653 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		1C98C7FE2A6718BF00F93653 /* ScheduleCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCellScreen.swift; sourceTree = "<group>"; };
+		1C98C8002A6718E600F93653 /* ScheduleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCellViewModel.swift; sourceTree = "<group>"; };
+		1C98C8022A67191900F93653 /* ScheduleCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCustomTableViewCell.swift; sourceTree = "<group>"; };
+		1C98C8042A67193F00F93653 /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
+		1C98C8072A671AE700F93653 /* schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule.json; sourceTree = "<group>"; };
+		1C98C80E2A67248900F93653 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		1C98C8102A6724A900F93653 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		1C98C8122A6724D000F93653 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		1C98C8152A67251500F93653 /* EventScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScreen.swift; sourceTree = "<group>"; };
+		1C98C8192A67258300F93653 /* TableTrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTrackTableViewCell.swift; sourceTree = "<group>"; };
+		1C98C81C2A6725B600F93653 /* FirstGrandPrixCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGrandPrixCellScreen.swift; sourceTree = "<group>"; };
+		1C98C81E2A6725D400F93653 /* TrackImageCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackImageCellScreen.swift; sourceTree = "<group>"; };
+		1C98C8202A6725F100F93653 /* CircuitLenghtCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitLenghtCellScreen.swift; sourceTree = "<group>"; };
+		1C98C8222A67261800F93653 /* RaceLapsCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceLapsCellScreen.swift; sourceTree = "<group>"; };
+		1C98C8242A67263400F93653 /* RaceDistanceCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDistanceCellScreen.swift; sourceTree = "<group>"; };
+		1C98C8262A67265300F93653 /* TrackRecordCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRecordCellScreen.swift; sourceTree = "<group>"; };
+		1C98C8282A67268F00F93653 /* HeaderStandings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderStandings.swift; sourceTree = "<group>"; };
+		1C98C82A2A6726AA00F93653 /* StandingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsTableViewCell.swift; sourceTree = "<group>"; };
+		1C98C82C2A6726CF00F93653 /* CustomStandingsTableViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStandingsTableViewScreen.swift; sourceTree = "<group>"; };
+		1C98C82E2A67273500F93653 /* StandingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsService.swift; sourceTree = "<group>"; };
+		1C98C8302A67275200F93653 /* CircuitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitService.swift; sourceTree = "<group>"; };
+		1C98C8342A6728F200F93653 /* seasonCircuitInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = seasonCircuitInfo.json; sourceTree = "<group>"; };
 		1CE86BB22A61BA8C00B4022C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		1CE86BB72A61BF6500B4022C /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		1CE86BBB2A61C4C700B4022C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5B71B240A2C3D70BF7656A54 /* Pods-FastLaneF1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLaneF1.release.xcconfig"; path = "Target Support Files/Pods-FastLaneF1/Pods-FastLaneF1.release.xcconfig"; sourceTree = "<group>"; };
+		5CE6A7FB3A9536ACE1CC35B3 /* Pods_FastLaneF1_FastLaneF1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastLaneF1_FastLaneF1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A62C01F564194869D9D012D /* Pods_FastLaneF1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastLaneF1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88EFF8A8D24ECADD11FE4EA6 /* Pods-FastLaneF1-FastLaneF1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLaneF1-FastLaneF1UITests.release.xcconfig"; path = "Target Support Files/Pods-FastLaneF1-FastLaneF1UITests/Pods-FastLaneF1-FastLaneF1UITests.release.xcconfig"; sourceTree = "<group>"; };
+		A2E239CB7FA33AE6912AA836 /* Pods-FastLaneF1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLaneF1.debug.xcconfig"; path = "Target Support Files/Pods-FastLaneF1/Pods-FastLaneF1.debug.xcconfig"; sourceTree = "<group>"; };
+		B1291613470D3E21C8663FAF /* Pods-FastLaneF1-FastLaneF1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLaneF1-FastLaneF1UITests.debug.xcconfig"; path = "Target Support Files/Pods-FastLaneF1-FastLaneF1UITests/Pods-FastLaneF1-FastLaneF1UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E462BBE014CF25614D26ECD9 /* Pods_FastLaneF1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastLaneF1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F62859D5DCBC8C99371E47B0 /* Pods-FastLaneF1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLaneF1Tests.debug.xcconfig"; path = "Target Support Files/Pods-FastLaneF1Tests/Pods-FastLaneF1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378DB0876FE27158EB007276 /* Pods_FastLaneF1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8884D379246816B74742FC0 /* Pods_FastLaneF1Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847C69646CF86C1CE70EF76F /* Pods_FastLaneF1_FastLaneF1UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +166,8 @@
 				1C06DCE02A61B12500FD02FB /* FastLaneF1Tests */,
 				1C06DCEA2A61B12500FD02FB /* FastLaneF1UITests */,
 				1C06DCC82A61B12400FD02FB /* Products */,
+				3643736DCF448DFD594555FD /* Pods */,
+				61F897575F125C7A6C94D9AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,10 +184,12 @@
 		1C06DCC92A61B12400FD02FB /* FastLaneF1 */ = {
 			isa = PBXGroup;
 			children = (
+				1C98C8062A671AC000F93653 /* Json */,
+				1CE86BB12A61BA7B00B4022C /* Preview Content */,
 				1C5484662A658679000EB373 /* Service */,
 				1CE86BB92A61C49000B4022C /* TabBar */,
-				1CE86BB12A61BA7B00B4022C /* Preview Content */,
 				1C06DCFA2A61B4A300FD02FB /* Home */,
+				1C98C7EE2A67171200F93653 /* Schedule */,
 				1C06DCCA2A61B12400FD02FB /* AppDelegate.swift */,
 				1C06DCCC2A61B12400FD02FB /* SceneDelegate.swift */,
 				1C06DCD32A61B12500FD02FB /* Assets.xcassets */,
@@ -166,6 +237,9 @@
 		1C5484662A658679000EB373 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				1C98C8042A67193F00F93653 /* ScheduleService.swift */,
+				1C98C82E2A67273500F93653 /* StandingsService.swift */,
+				1C98C8302A67275200F93653 /* CircuitService.swift */,
 				1C5484672A658688000EB373 /* GenericService.swift */,
 			);
 			path = Service;
@@ -187,6 +261,171 @@
 				1C74BC442A65B0380017F11D /* LatestResultCell.swift */,
 				1C74BC422A65AEF00017F11D /* ChampionshipStandingsCell.swift */,
 				1C74BC462A65B2910017F11D /* ScheduleCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1C98C7EE2A67171200F93653 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C8092A67233000F93653 /* ScheduleSection */,
+				1C98C80A2A6723C900F93653 /* EventDetail */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		1C98C7EF2A67175B00F93653 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C7F52A6717C000F93653 /* ViewModel */,
+				1C98C7F42A6717B700F93653 /* View */,
+				1C98C8022A67191900F93653 /* ScheduleCustomTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1C98C7F02A67176200F93653 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C7F62A6717F400F93653 /* ScheduleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C98C7F12A67177200F93653 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C7F32A6717A800F93653 /* Screen */,
+				1C98C7F82A67183300F93653 /* ScheduleViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1C98C7F22A67177A00F93653 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C7FC2A67188200F93653 /* ScheduleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1C98C7F32A6717A800F93653 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C7FA2A67185D00F93653 /* ScheduleScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		1C98C7F42A6717B700F93653 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C7FE2A6718BF00F93653 /* ScheduleCellScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1C98C7F52A6717C000F93653 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C8002A6718E600F93653 /* ScheduleCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1C98C8062A671AC000F93653 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C8072A671AE700F93653 /* schedule.json */,
+				1C98C8342A6728F200F93653 /* seasonCircuitInfo.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		1C98C8092A67233000F93653 /* ScheduleSection */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C7EF2A67175B00F93653 /* Cell */,
+				1C98C7F02A67176200F93653 /* Model */,
+				1C98C7F12A67177200F93653 /* View */,
+				1C98C7F22A67177A00F93653 /* ViewModel */,
+			);
+			path = ScheduleSection;
+			sourceTree = "<group>";
+		};
+		1C98C80A2A6723C900F93653 /* EventDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C80B2A67243D00F93653 /* Model */,
+				1C98C80C2A67244E00F93653 /* View */,
+				1C98C80D2A67245800F93653 /* ViewModel */,
+			);
+			path = EventDetail;
+			sourceTree = "<group>";
+		};
+		1C98C80B2A67243D00F93653 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C80E2A67248900F93653 /* EventModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C98C80C2A67244E00F93653 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C8142A6724DE00F93653 /* EventScreen */,
+				1C98C8122A6724D000F93653 /* EventViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1C98C80D2A67245800F93653 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C8102A6724A900F93653 /* EventViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1C98C8142A6724DE00F93653 /* EventScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C8182A67254900F93653 /* StandingsScreen */,
+				1C98C8172A67253200F93653 /* TrackScreen */,
+				1C98C8152A67251500F93653 /* EventScreen.swift */,
+			);
+			path = EventScreen;
+			sourceTree = "<group>";
+		};
+		1C98C8172A67253200F93653 /* TrackScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C81B2A67259100F93653 /* Cells */,
+				1C98C8192A67258300F93653 /* TableTrackTableViewCell.swift */,
+			);
+			path = TrackScreen;
+			sourceTree = "<group>";
+		};
+		1C98C8182A67254900F93653 /* StandingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C8282A67268F00F93653 /* HeaderStandings.swift */,
+				1C98C82A2A6726AA00F93653 /* StandingsTableViewCell.swift */,
+				1C98C82C2A6726CF00F93653 /* CustomStandingsTableViewScreen.swift */,
+			);
+			path = StandingsScreen;
+			sourceTree = "<group>";
+		};
+		1C98C81B2A67259100F93653 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1C98C81E2A6725D400F93653 /* TrackImageCellScreen.swift */,
+				1C98C8202A6725F100F93653 /* CircuitLenghtCellScreen.swift */,
+				1C98C8222A67261800F93653 /* RaceLapsCellScreen.swift */,
+				1C98C81C2A6725B600F93653 /* FirstGrandPrixCellScreen.swift */,
+				1C98C8242A67263400F93653 /* RaceDistanceCellScreen.swift */,
+				1C98C8262A67265300F93653 /* TrackRecordCellScreen.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -223,6 +462,29 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		3643736DCF448DFD594555FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2E239CB7FA33AE6912AA836 /* Pods-FastLaneF1.debug.xcconfig */,
+				5B71B240A2C3D70BF7656A54 /* Pods-FastLaneF1.release.xcconfig */,
+				B1291613470D3E21C8663FAF /* Pods-FastLaneF1-FastLaneF1UITests.debug.xcconfig */,
+				88EFF8A8D24ECADD11FE4EA6 /* Pods-FastLaneF1-FastLaneF1UITests.release.xcconfig */,
+				F62859D5DCBC8C99371E47B0 /* Pods-FastLaneF1Tests.debug.xcconfig */,
+				1BC58D03C7242CC5A3D88FE6 /* Pods-FastLaneF1Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		61F897575F125C7A6C94D9AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E462BBE014CF25614D26ECD9 /* Pods_FastLaneF1.framework */,
+				5CE6A7FB3A9536ACE1CC35B3 /* Pods_FastLaneF1_FastLaneF1UITests.framework */,
+				6A62C01F564194869D9D012D /* Pods_FastLaneF1Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,9 +492,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C06DCF12A61B12500FD02FB /* Build configuration list for PBXNativeTarget "FastLaneF1" */;
 			buildPhases = (
+				5DCA7B2F46E22C3430428E87 /* [CP] Check Pods Manifest.lock */,
 				1C06DCC32A61B12400FD02FB /* Sources */,
 				1C06DCC42A61B12400FD02FB /* Frameworks */,
 				1C06DCC52A61B12400FD02FB /* Resources */,
+				49F1478B6B3950B016D19827 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +511,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C06DCF42A61B12500FD02FB /* Build configuration list for PBXNativeTarget "FastLaneF1Tests" */;
 			buildPhases = (
+				043D787C14CDEE75A3A9F3DE /* [CP] Check Pods Manifest.lock */,
 				1C06DCD92A61B12500FD02FB /* Sources */,
 				1C06DCDA2A61B12500FD02FB /* Frameworks */,
 				1C06DCDB2A61B12500FD02FB /* Resources */,
@@ -265,9 +530,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C06DCF72A61B12500FD02FB /* Build configuration list for PBXNativeTarget "FastLaneF1UITests" */;
 			buildPhases = (
+				B007A21FFD4B38AE1EB199DC /* [CP] Check Pods Manifest.lock */,
 				1C06DCE32A61B12500FD02FB /* Sources */,
 				1C06DCE42A61B12500FD02FB /* Frameworks */,
 				1C06DCE52A61B12500FD02FB /* Resources */,
+				C8729AF7A82C6BCC097F31DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -329,6 +596,8 @@
 			files = (
 				1C06DCD72A61B12500FD02FB /* LaunchScreen.storyboard in Resources */,
 				1C06DCD42A61B12500FD02FB /* Assets.xcassets in Resources */,
+				1C98C8352A6728F200F93653 /* seasonCircuitInfo.json in Resources */,
+				1C98C8082A671AE700F93653 /* schedule.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,22 +617,149 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		043D787C14CDEE75A3A9F3DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastLaneF1Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49F1478B6B3950B016D19827 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FastLaneF1/Pods-FastLaneF1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FastLaneF1/Pods-FastLaneF1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FastLaneF1/Pods-FastLaneF1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DCA7B2F46E22C3430428E87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastLaneF1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B007A21FFD4B38AE1EB199DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastLaneF1-FastLaneF1UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8729AF7A82C6BCC097F31DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FastLaneF1-FastLaneF1UITests/Pods-FastLaneF1-FastLaneF1UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FastLaneF1-FastLaneF1UITests/Pods-FastLaneF1-FastLaneF1UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FastLaneF1-FastLaneF1UITests/Pods-FastLaneF1-FastLaneF1UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1C06DCC32A61B12400FD02FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1C06DCCF2A61B12400FD02FB /* HomeViewController.swift in Sources */,
+				1C98C7FB2A67185D00F93653 /* ScheduleScreen.swift in Sources */,
 				1CE86BB82A61BF6500B4022C /* HomeScreenView.swift in Sources */,
+				1C98C8112A6724A900F93653 /* EventViewModel.swift in Sources */,
+				1C98C82B2A6726AA00F93653 /* StandingsTableViewCell.swift in Sources */,
+				1C98C8292A67268F00F93653 /* HeaderStandings.swift in Sources */,
+				1C98C7F72A6717F400F93653 /* ScheduleModel.swift in Sources */,
+				1C98C8212A6725F100F93653 /* CircuitLenghtCellScreen.swift in Sources */,
+				1C98C80F2A67248900F93653 /* EventModel.swift in Sources */,
+				1C98C81D2A6725B600F93653 /* FirstGrandPrixCellScreen.swift in Sources */,
 				1C74BC432A65AEF00017F11D /* ChampionshipStandingsCell.swift in Sources */,
 				1C5484682A658688000EB373 /* GenericService.swift in Sources */,
+				1C98C8052A67193F00F93653 /* ScheduleService.swift in Sources */,
+				1C98C8132A6724D000F93653 /* EventViewController.swift in Sources */,
+				1C98C7F92A67183300F93653 /* ScheduleViewController.swift in Sources */,
+				1C98C81A2A67258300F93653 /* TableTrackTableViewCell.swift in Sources */,
+				1C98C8232A67261800F93653 /* RaceLapsCellScreen.swift in Sources */,
+				1C98C8032A67191900F93653 /* ScheduleCustomTableViewCell.swift in Sources */,
+				1C98C8012A6718E600F93653 /* ScheduleCellViewModel.swift in Sources */,
 				1CE86BB32A61BA8D00B4022C /* Color.swift in Sources */,
 				1C06DCCB2A61B12400FD02FB /* AppDelegate.swift in Sources */,
+				1C98C81F2A6725D400F93653 /* TrackImageCellScreen.swift in Sources */,
+				1C98C82F2A67273500F93653 /* StandingsService.swift in Sources */,
 				1CE86BBC2A61C4C700B4022C /* TabBarViewController.swift in Sources */,
+				1C98C7FF2A6718BF00F93653 /* ScheduleCellScreen.swift in Sources */,
 				1C54846E2A658DEF000EB373 /* UpcomingEventCell.swift in Sources */,
+				1C98C8272A67265300F93653 /* TrackRecordCellScreen.swift in Sources */,
+				1C98C8312A67275200F93653 /* CircuitService.swift in Sources */,
+				1C98C82D2A6726CF00F93653 /* CustomStandingsTableViewScreen.swift in Sources */,
+				1C98C8252A67263400F93653 /* RaceDistanceCellScreen.swift in Sources */,
+				1C98C7FD2A67188200F93653 /* ScheduleViewModel.swift in Sources */,
 				1C74BC452A65B0380017F11D /* LatestResultCell.swift in Sources */,
 				1C54846B2A658C94000EB373 /* HomeTableViewCell.swift in Sources */,
 				1C74BC472A65B2910017F11D /* ScheduleCell.swift in Sources */,
+				1C98C8162A67251500F93653 /* EventScreen.swift in Sources */,
 				1C06DCCD2A61B12400FD02FB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +924,7 @@
 		};
 		1C06DCF22A61B12500FD02FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2E239CB7FA33AE6912AA836 /* Pods-FastLaneF1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -556,6 +953,7 @@
 		};
 		1C06DCF32A61B12500FD02FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B71B240A2C3D70BF7656A54 /* Pods-FastLaneF1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -584,6 +982,7 @@
 		};
 		1C06DCF52A61B12500FD02FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F62859D5DCBC8C99371E47B0 /* Pods-FastLaneF1Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -604,6 +1003,7 @@
 		};
 		1C06DCF62A61B12500FD02FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BC58D03C7242CC5A3D88FE6 /* Pods-FastLaneF1Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -624,6 +1024,7 @@
 		};
 		1C06DCF82A61B12500FD02FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1291613470D3E21C8663FAF /* Pods-FastLaneF1-FastLaneF1UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -642,6 +1043,7 @@
 		};
 		1C06DCF92A61B12500FD02FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88EFF8A8D24ECADD11FE4EA6 /* Pods-FastLaneF1-FastLaneF1UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
