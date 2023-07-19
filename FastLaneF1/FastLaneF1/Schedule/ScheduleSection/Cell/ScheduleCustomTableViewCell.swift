@@ -38,7 +38,7 @@ class ScheduleCustomTableViewCell: UITableViewCell {
         screen.roundLabel.text = "Round \(viewModel!.getRaceRound)"
         screen.countryLabel.text = viewModel?.getRaceCountry
         screen.nameEventLabel.text = viewModel?.getRaceDescription
-        screen.dayLabel.text = "\(viewModel?.getRaceDay ?? 0)"
+        screen.dayLabel.text = "\(viewModel?.startEventDay ?? "") - \(viewModel?.getRaceDay ?? "")"
         screen.monthLabel.text = viewModel?.getRaceMonth
     }
     

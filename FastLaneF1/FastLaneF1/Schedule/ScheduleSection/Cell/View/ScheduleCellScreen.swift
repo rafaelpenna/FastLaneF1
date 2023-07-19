@@ -9,6 +9,19 @@ import UIKit
 
 class ScheduleCellScreen: UIView {
     
+    lazy var flagView: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 15)
+        label.layer.borderColor = UIColor.white.cgColor
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 8
+        label.backgroundColor = .white
+        return label
+    }()
+    
     lazy var roundLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -22,7 +35,7 @@ class ScheduleCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.textColor = .black
+        label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 28)
         return label
     }()
@@ -41,7 +54,7 @@ class ScheduleCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.textColor = .black
+        label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 17)
         return label
     }()
@@ -52,10 +65,10 @@ class ScheduleCellScreen: UIView {
         label.textAlignment = .center
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 15)
-        label.layer.borderColor = UIColor.darkGray.cgColor
+        label.layer.borderColor = UIColor.white.cgColor
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 8
-        label.backgroundColor = .lightGray
+        label.backgroundColor = .white
         return label
     }()
     
@@ -69,7 +82,7 @@ class ScheduleCellScreen: UIView {
     lazy var divisionView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.backgroundColor = UIColor.darkGray.cgColor
+        view.layer.backgroundColor = UIColor.white.cgColor
         return view
     }()
 
@@ -84,6 +97,7 @@ class ScheduleCellScreen: UIView {
     }
     
     private func addSubViews(){
+        addSubview(flagView)
         addSubview(roundLabel)
         addSubview(countryLabel)
         addSubview(nameEventLabel)
@@ -96,16 +110,13 @@ class ScheduleCellScreen: UIView {
     private func configConstraintsInfoDriver(){
         NSLayoutConstraint.activate([
             
-            dayLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            dayLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            dayLabel.widthAnchor.constraint(equalToConstant: 60),
-            
-            monthLabel.topAnchor.constraint(equalTo: dayLabel.bottomAnchor, constant: 4),
-            monthLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            monthLabel.widthAnchor.constraint(equalToConstant: 60),
+            flagView.centerXAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            flagView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            flagView.widthAnchor.constraint(equalToConstant: 30),
+            flagView.heightAnchor.constraint(equalToConstant: 30),
             
             roundLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            roundLabel.leadingAnchor.constraint(equalTo: monthLabel.trailingAnchor, constant: 20),
+            roundLabel.leadingAnchor.constraint(equalTo: flagView.trailingAnchor, constant: 10),
             
             countryLabel.topAnchor.constraint(equalTo: roundLabel.bottomAnchor, constant: 2),
             countryLabel.leadingAnchor.constraint(equalTo: roundLabel.leadingAnchor),
@@ -121,8 +132,16 @@ class ScheduleCellScreen: UIView {
             
             divisionView.topAnchor.constraint(equalTo: nameEventLabel.bottomAnchor, constant: 20),
             divisionView.heightAnchor.constraint(equalToConstant: 0.3),
-            divisionView.leadingAnchor.constraint(equalTo: monthLabel.leadingAnchor),
+            divisionView.leadingAnchor.constraint(equalTo: flagView.leadingAnchor),
             divisionView.trailingAnchor.constraint(equalTo: fowardButton.leadingAnchor),
+            
+            dayLabel.topAnchor.constraint(equalTo: roundLabel.bottomAnchor, constant: -5),
+            dayLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            dayLabel.widthAnchor.constraint(equalToConstant: 85),
+            
+            monthLabel.topAnchor.constraint(equalTo: dayLabel.bottomAnchor, constant: 4),
+            monthLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            monthLabel.widthAnchor.constraint(equalToConstant: 85),
         ])
     }
 }

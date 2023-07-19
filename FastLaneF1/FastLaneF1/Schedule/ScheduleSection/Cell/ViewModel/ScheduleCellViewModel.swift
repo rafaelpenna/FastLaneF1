@@ -27,8 +27,24 @@ class ScheduleCellViewModel {
         return data.circuit.circuitName
     }
     
-    public var getRaceDay: Int {
-        return Int(String(data.date.suffix(2))) ?? 00
+    public var startEventDay: String {
+        if (Int(String(data.date.suffix(2))) ?? 00) - 2 >= 10 {
+            return String((Int(data.date.suffix(2)) ?? 00) - 2)
+        } else if String(data.date.suffix(5)) == "04-02" {
+            return "31/03"
+        } else if String(data.date.suffix(5)) == "07-02" {
+            return "30/06"
+        } else {
+            return String("\(0)\((Int(data.date.suffix(2)) ?? 00) - 2)")
+        }
+    }
+    
+    public var getRaceDay: String {
+        if Int(String(data.date.suffix(2))) ?? 00 >= 10 {
+            return String(data.date.suffix(2))
+        } else {
+            return String("\(data.date.suffix(2))")
+        }
     }
     
     public var getRaceMonthNumber: String {
@@ -39,27 +55,27 @@ class ScheduleCellViewModel {
         if String(data.date.prefix(7)) == "2023-01" {
             return "JAN"
         } else if String(data.date.prefix(7)) == "2023-02" {
-            return "FEV"
+            return "FEB"
         } else if String(data.date.prefix(7)) == "2023-03" {
             return "MAR"
         } else if String(data.date.prefix(7)) == "2023-04" {
-            return "ABR"
+            return "APR"
         } else if String(data.date.prefix(7)) == "2023-05" {
-            return "MAI"
+            return "MAY"
         } else if String(data.date.prefix(7)) == "2023-06" {
             return "JUN"
         } else if String(data.date.prefix(7)) == "2023-07" {
             return "JUL"
         } else if String(data.date.prefix(7)) == "2023-08" {
-            return "AGO"
+            return "AUG"
         } else if String(data.date.prefix(7)) == "2023-09" {
-            return "SET"
+            return "SEP"
         } else if String(data.date.prefix(7)) == "2023-10" {
-            return "OUT"
+            return "OCT"
         } else if String(data.date.prefix(7)) == "2023-11" {
             return "NOV"
         } else if String(data.date.prefix(7)) == "2023-12" {
-            return "DEZ"
+            return "DEC"
         }
         return " "
     }
