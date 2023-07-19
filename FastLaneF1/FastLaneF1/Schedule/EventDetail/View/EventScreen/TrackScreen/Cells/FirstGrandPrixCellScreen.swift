@@ -53,7 +53,7 @@ class FirstGrandPrixCellScreen: UITableViewCell {
     }
     
     private func setBackgroundColor() {
-        backgroundColor = .darkColorApp
+        backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
     }
     
     private func configConstraintsInfoDriver(){

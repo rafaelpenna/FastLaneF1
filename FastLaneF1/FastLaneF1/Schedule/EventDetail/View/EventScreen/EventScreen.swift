@@ -98,7 +98,7 @@ class StandingsScreen: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .darkColorApp
+        tableView.backgroundColor = .white
         tableView.register(TrackImageCellScreen.self, forCellReuseIdentifier: TrackImageCellScreen.identifier)
         tableView.register(CircuitLenghtCellScreen.self, forCellReuseIdentifier: CircuitLenghtCellScreen.identifier)
         tableView.register(RaceLapsCellScreen.self, forCellReuseIdentifier: RaceLapsCellScreen.identifier)
@@ -160,7 +160,7 @@ class StandingsScreen: UIView {
             trackButton.topAnchor.constraint(equalTo: circuitCountryLabel.bottomAnchor, constant: 15),
             trackButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
             
-            trackTableView.topAnchor.constraint(equalTo: standingsButton.bottomAnchor),
+            trackTableView.topAnchor.constraint(equalTo: standingsButton.bottomAnchor, constant: 5),
             trackTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             trackTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             trackTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
@@ -172,12 +172,12 @@ class StandingsScreen: UIView {
             
 //MARK: - StandingsBoardView Constraints
          
-            standingsBoardView.topAnchor.constraint(equalTo: standingsButton.bottomAnchor),
+            standingsBoardView.topAnchor.constraint(equalTo: standingsButton.bottomAnchor, constant: 5),
             standingsBoardView.leadingAnchor.constraint(equalTo: leadingAnchor),
             standingsBoardView.trailingAnchor.constraint(equalTo: trailingAnchor),
             standingsBoardView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -90),
                         
-            standingsHeader.topAnchor.constraint(equalTo: standingsButton.bottomAnchor),
+            standingsHeader.topAnchor.constraint(equalTo: standingsButton.bottomAnchor, constant: 5),
             standingsHeader.leadingAnchor.constraint(equalTo: leadingAnchor),
             standingsHeader.trailingAnchor.constraint(equalTo: trailingAnchor),
             standingsHeader.heightAnchor.constraint(equalToConstant: 100),
