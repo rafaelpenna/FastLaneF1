@@ -15,9 +15,6 @@ class TrackImageCellScreen: UITableViewCell {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "interlagos")
-        image.layer.cornerRadius = 10
-        image.clipsToBounds = true
-        image.layer.borderWidth = 0.5
         return image
     }()
     
@@ -32,7 +29,7 @@ class TrackImageCellScreen: UITableViewCell {
     }
     
     private func setBackgroundColor() {
-        backgroundColor = .darkColorApp
+        backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
     }
     
     private func configConstraintsInfoDriver(){
