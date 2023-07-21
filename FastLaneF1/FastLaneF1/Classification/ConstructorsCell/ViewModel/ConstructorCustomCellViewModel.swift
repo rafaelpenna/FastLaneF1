@@ -54,9 +54,9 @@ class ConstructorScreenViewModel {
     
     public var getTeamsCar: UIImage {
         if data.constructor.name == "Red Bull" {
-            return UIImage(named: "ferraricar") ?? UIImage()
+            return UIImage(named: "redbullcar") ?? UIImage()
         } else if data.constructor.name == "Mercedes" {
-            return UIImage(named: "ferraricar") ?? UIImage()
+            return UIImage(named: "mercedescar") ?? UIImage()
         } else if data.constructor.name == "Aston Martin" {
             return UIImage(named: "astonmartincar") ?? UIImage()
         } else if data.constructor.name == "Ferrari" {

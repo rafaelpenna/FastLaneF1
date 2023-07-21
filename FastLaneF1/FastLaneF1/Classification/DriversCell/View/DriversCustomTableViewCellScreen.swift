@@ -90,16 +90,16 @@ class DriversCustomTableViewCellScreen: UIView {
     private func configConstraintsInfoDriver(){
         NSLayoutConstraint.activate([
             
-            positionLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            positionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            positionLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            positionLabel.centerXAnchor.constraint(equalTo: leadingAnchor, constant: 25),
 
             photoDriverImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             photoDriverImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50),
-            photoDriverImageView.heightAnchor.constraint(equalToConstant: 50),
-            photoDriverImageView.widthAnchor.constraint(equalToConstant: 50),
+            photoDriverImageView.heightAnchor.constraint(equalToConstant: 75),
+            photoDriverImageView.widthAnchor.constraint(equalToConstant: 75),
 
             nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 110),
+            nameLabel.leadingAnchor.constraint(equalTo: photoDriverImageView.trailingAnchor, constant: 20),
             
             lastNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             lastNameLabel.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 5),
