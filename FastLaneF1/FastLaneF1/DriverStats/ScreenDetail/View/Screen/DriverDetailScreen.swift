@@ -1,5 +1,5 @@
 //
-//  DriverStatsScreen.swift
+//  DriverDetailScreen.swift
 //  FastLaneF1
 //
 //  Created by Rafael Penna on 21/07/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DriverStatsScreen: UIView {
+class DriverDetailScreen: UIView {
     
     lazy var backButton: UIButton = {
        let backButton = UIButton()
@@ -20,17 +20,24 @@ class DriverStatsScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Driver Season Detail"
+        label.text = "Season Driver Stats"
         label.font = UIFont.boldSystemFont(ofSize: 35)
         return label
     }()
     
-    lazy var driversTableView: UITableView = {
+    lazy var backgroundDriverView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .yellow
+        return view
+    }()
+    
+    lazy var driversDetailTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
         tableView.backgroundColor = .darkColorApp
-        tableView.register(DriverStatsCustomTableViewCell.self, forCellReuseIdentifier: DriverStatsCustomTableViewCell.identifier)
+        tableView.register(DriverDetailCustomTableViewCell.self, forCellReuseIdentifier: DriverDetailCustomTableViewCell.identifier)
         return tableView
     }()
     
@@ -46,14 +53,15 @@ class DriverStatsScreen: UIView {
     }
     
     public func setupTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){
-        driversTableView.delegate = delegate
-        driversTableView.dataSource = dataSource
+        driversDetailTableView.delegate = delegate
+        driversDetailTableView.dataSource = dataSource
     }
     
     private func addElements() {
         addSubview(topTitleLabel)
+        addSubview(backgroundDriverView)
         addSubview(backButton)
-        addSubview(driversTableView)
+        addSubview(driversDetailTableView)
     }
     
     private func backgroundColor() {
@@ -71,10 +79,16 @@ class DriverStatsScreen: UIView {
             backButton.heightAnchor.constraint(equalToConstant: 20),
             backButton.widthAnchor.constraint(equalToConstant: 15),
             
-            driversTableView.topAnchor.constraint(equalTo: topTitleLabel.bottomAnchor, constant: 25),
-            driversTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            driversTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            driversTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            backgroundDriverView.topAnchor.constraint(equalTo: topTitleLabel.bottomAnchor, constant: 25),
+            backgroundDriverView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            backgroundDriverView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            backgroundDriverView.bottomAnchor.constraint(equalTo: centerYAnchor, constant: -10),
+            
+            driversDetailTableView.topAnchor.constraint(equalTo: backgroundDriverView.bottomAnchor),
+            driversDetailTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            driversDetailTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            driversDetailTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
 }
+

@@ -66,6 +66,14 @@
 		1CCCE30F2A6AD4A1008C6EC6 /* DriverStatsCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCCE30E2A6AD4A1008C6EC6 /* DriverStatsCustomTableViewCell.swift */; };
 		1CCCE3112A6AD4D6008C6EC6 /* DriverStatsCustomTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCCE3102A6AD4D6008C6EC6 /* DriverStatsCustomTableViewCellScreen.swift */; };
 		1CCCE3132A6AD4F7008C6EC6 /* DriverStatsCustomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCCE3122A6AD4F7008C6EC6 /* DriverStatsCustomCellViewModel.swift */; };
+		1CD92A5F2A6AEB5100D1F598 /* DriverDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92A5E2A6AEB5100D1F598 /* DriverDetailScreen.swift */; };
+		1CD92A612A6AEC9600D1F598 /* DriverDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92A602A6AEC9600D1F598 /* DriverDetailViewController.swift */; };
+		1CD92A632A6AED8200D1F598 /* DriversDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92A622A6AED8200D1F598 /* DriversDetailViewModel.swift */; };
+		1CD92A652A6AEDF100D1F598 /* DriversDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92A642A6AEDF100D1F598 /* DriversDetailModel.swift */; };
+		1CD92A682A6AF1BA00D1F598 /* DriverDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92A672A6AF1BA00D1F598 /* DriverDetailService.swift */; };
+		1CD92A6C2A6AF85700D1F598 /* DriverDetailCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92A6B2A6AF85700D1F598 /* DriverDetailCustomTableViewCell.swift */; };
+		1CD92A6E2A6AF89C00D1F598 /* DriverDetailCustomTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92A6D2A6AF89C00D1F598 /* DriverDetailCustomTableViewCellScreen.swift */; };
+		1CD92A702A6AF8BC00D1F598 /* DriverDetailCustomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92A6F2A6AF8BC00D1F598 /* DriverDetailCustomCellViewModel.swift */; };
 		1CE86BB32A61BA8D00B4022C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE86BB22A61BA8C00B4022C /* Color.swift */; };
 		1CE86BB82A61BF6500B4022C /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE86BB72A61BF6500B4022C /* HomeScreenView.swift */; };
 		1CE86BBC2A61C4C700B4022C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE86BBB2A61C4C700B4022C /* TabBarViewController.swift */; };
@@ -156,6 +164,14 @@
 		1CCCE30E2A6AD4A1008C6EC6 /* DriverStatsCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStatsCustomTableViewCell.swift; sourceTree = "<group>"; };
 		1CCCE3102A6AD4D6008C6EC6 /* DriverStatsCustomTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStatsCustomTableViewCellScreen.swift; sourceTree = "<group>"; };
 		1CCCE3122A6AD4F7008C6EC6 /* DriverStatsCustomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStatsCustomCellViewModel.swift; sourceTree = "<group>"; };
+		1CD92A5E2A6AEB5100D1F598 /* DriverDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailScreen.swift; sourceTree = "<group>"; };
+		1CD92A602A6AEC9600D1F598 /* DriverDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailViewController.swift; sourceTree = "<group>"; };
+		1CD92A622A6AED8200D1F598 /* DriversDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversDetailViewModel.swift; sourceTree = "<group>"; };
+		1CD92A642A6AEDF100D1F598 /* DriversDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversDetailModel.swift; sourceTree = "<group>"; };
+		1CD92A672A6AF1BA00D1F598 /* DriverDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailService.swift; sourceTree = "<group>"; };
+		1CD92A6B2A6AF85700D1F598 /* DriverDetailCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailCustomTableViewCell.swift; sourceTree = "<group>"; };
+		1CD92A6D2A6AF89C00D1F598 /* DriverDetailCustomTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailCustomTableViewCellScreen.swift; sourceTree = "<group>"; };
+		1CD92A6F2A6AF8BC00D1F598 /* DriverDetailCustomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailCustomCellViewModel.swift; sourceTree = "<group>"; };
 		1CE86BB22A61BA8C00B4022C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		1CE86BB72A61BF6500B4022C /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		1CE86BBB2A61C4C700B4022C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +298,7 @@
 				1C98C8042A67193F00F93653 /* ScheduleService.swift */,
 				1C98C82E2A67273500F93653 /* StandingsService.swift */,
 				1C98C8302A67275200F93653 /* CircuitService.swift */,
+				1CD92A672A6AF1BA00D1F598 /* DriverDetailService.swift */,
 				1C5484672A658688000EB373 /* GenericService.swift */,
 			);
 			path = Service;
@@ -611,6 +628,8 @@
 		1CCCE3022A6ACC92008C6EC6 /* ScreenDetail */ = {
 			isa = PBXGroup;
 			children = (
+				1CD92A662A6AF04B00D1F598 /* DriverDetailCell */,
+				1CD92A5C2A6AEAC500D1F598 /* Model */,
 				1CCCE3042A6ACD1D008C6EC6 /* View */,
 				1CCCE3032A6ACD0B008C6EC6 /* ViewModel */,
 			);
@@ -620,6 +639,7 @@
 		1CCCE3032A6ACD0B008C6EC6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1CD92A622A6AED8200D1F598 /* DriversDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -627,6 +647,8 @@
 		1CCCE3042A6ACD1D008C6EC6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1CD92A5D2A6AEB1800D1F598 /* Screen */,
+				1CD92A602A6AEC9600D1F598 /* DriverDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -651,6 +673,48 @@
 			isa = PBXGroup;
 			children = (
 				1CCCE3122A6AD4F7008C6EC6 /* DriverStatsCustomCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1CD92A5C2A6AEAC500D1F598 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1CD92A642A6AEDF100D1F598 /* DriversDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1CD92A5D2A6AEB1800D1F598 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1CD92A5E2A6AEB5100D1F598 /* DriverDetailScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		1CD92A662A6AF04B00D1F598 /* DriverDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				1CD92A692A6AF83100D1F598 /* View */,
+				1CD92A6A2A6AF83700D1F598 /* ViewModel */,
+				1CD92A6B2A6AF85700D1F598 /* DriverDetailCustomTableViewCell.swift */,
+			);
+			path = DriverDetailCell;
+			sourceTree = "<group>";
+		};
+		1CD92A692A6AF83100D1F598 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CD92A6D2A6AF89C00D1F598 /* DriverDetailCustomTableViewCellScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1CD92A6A2A6AF83700D1F598 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1CD92A6F2A6AF8BC00D1F598 /* DriverDetailCustomCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -951,6 +1015,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CCCE3112A6AD4D6008C6EC6 /* DriverStatsCustomTableViewCellScreen.swift in Sources */,
+				1CD92A702A6AF8BC00D1F598 /* DriverDetailCustomCellViewModel.swift in Sources */,
 				1CCCE3062A6ACE0D008C6EC6 /* DriverStatsViewModel.swift in Sources */,
 				1C06DCCF2A61B12400FD02FB /* HomeViewController.swift in Sources */,
 				1C98C7FB2A67185D00F93653 /* ScheduleScreen.swift in Sources */,
@@ -962,18 +1027,22 @@
 				1C782B442A6853400018C5B4 /* DriversService.swift in Sources */,
 				1CCCE30F2A6AD4A1008C6EC6 /* DriverStatsCustomTableViewCell.swift in Sources */,
 				1C98C8292A67268F00F93653 /* HeaderStandings.swift in Sources */,
+				1CD92A652A6AEDF100D1F598 /* DriversDetailModel.swift in Sources */,
 				1CCCE3082A6ACF72008C6EC6 /* DriverStatsViewController.swift in Sources */,
 				1C98C7F72A6717F400F93653 /* ScheduleModel.swift in Sources */,
 				1C98C8212A6725F100F93653 /* CircuitLenghtCellScreen.swift in Sources */,
 				1C98C80F2A67248900F93653 /* EventModel.swift in Sources */,
 				1C98C81D2A6725B600F93653 /* FirstGrandPrixCellScreen.swift in Sources */,
 				1C74BC432A65AEF00017F11D /* ChampionshipStandingsCell.swift in Sources */,
+				1CD92A5F2A6AEB5100D1F598 /* DriverDetailScreen.swift in Sources */,
 				1C5484682A658688000EB373 /* GenericService.swift in Sources */,
 				1C98C8052A67193F00F93653 /* ScheduleService.swift in Sources */,
+				1CD92A6C2A6AF85700D1F598 /* DriverDetailCustomTableViewCell.swift in Sources */,
 				1C782B352A684EE00018C5B4 /* ClassificationViewController.swift in Sources */,
 				1C98C8132A6724D000F93653 /* EventViewController.swift in Sources */,
 				1C98C7F92A67183300F93653 /* ScheduleViewController.swift in Sources */,
 				1C98C81A2A67258300F93653 /* TableTrackTableViewCell.swift in Sources */,
+				1CD92A612A6AEC9600D1F598 /* DriverDetailViewController.swift in Sources */,
 				1C98C8232A67261800F93653 /* RaceLapsCellScreen.swift in Sources */,
 				1C98C8032A67191900F93653 /* ScheduleCustomTableViewCell.swift in Sources */,
 				1C98C8012A6718E600F93653 /* ScheduleCellViewModel.swift in Sources */,
@@ -981,12 +1050,14 @@
 				1C06DCCB2A61B12400FD02FB /* AppDelegate.swift in Sources */,
 				1C782B4F2A685EE50018C5B4 /* ConstructorCustomTableViewCellScreen.swift in Sources */,
 				1C782B4D2A685E930018C5B4 /* ConstructorCustomTableViewCell.swift in Sources */,
+				1CD92A6E2A6AF89C00D1F598 /* DriverDetailCustomTableViewCellScreen.swift in Sources */,
 				1C782B392A684F9B0018C5B4 /* DriverStatsDriverViewModel.swift in Sources */,
 				1C98C81F2A6725D400F93653 /* TrackImageCellScreen.swift in Sources */,
 				1C782B402A6850420018C5B4 /* DriversCustomTableViewCell.swift in Sources */,
 				1C782B422A6850670018C5B4 /* DriverCustomCellViewModel.swift in Sources */,
 				1C782B3E2A68501D0018C5B4 /* DriversCustomTableViewCellScreen.swift in Sources */,
 				1C98C82F2A67273500F93653 /* StandingsService.swift in Sources */,
+				1CD92A682A6AF1BA00D1F598 /* DriverDetailService.swift in Sources */,
 				1C782B512A685F090018C5B4 /* ConstructorCustomCellViewModel.swift in Sources */,
 				1CE86BBC2A61C4C700B4022C /* TabBarViewController.swift in Sources */,
 				1C98C7FF2A6718BF00F93653 /* ScheduleCellScreen.swift in Sources */,
@@ -1005,6 +1076,7 @@
 				1CCCE30B2A6AD33F008C6EC6 /* DriverStatsScreen.swift in Sources */,
 				1C98C8162A67251500F93653 /* EventScreen.swift in Sources */,
 				1C06DCCD2A61B12400FD02FB /* SceneDelegate.swift in Sources */,
+				1CD92A632A6AED8200D1F598 /* DriversDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

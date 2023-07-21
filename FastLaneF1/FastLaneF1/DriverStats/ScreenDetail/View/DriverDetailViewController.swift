@@ -1,5 +1,5 @@
 //
-//  DriverStatsViewController.swift
+//  DriverDetailViewController.swift
 //  FastLaneF1
 //
 //  Created by Rafael Penna on 21/07/23.
@@ -7,23 +7,23 @@
 
 import UIKit
 
-protocol DriverStatsViewControllerProtocol: AnyObject {
-    func passDriverData(data: DriverStandingDriversModel)
+protocol DriverDetailViewControllerProtocol: AnyObject {
+    func passDriverData(data: DriverDetailRace)
 }
 
-class DriverStatsViewController: UIViewController {
+class DriverDetailViewController: UIViewController {
     
-    var driversScreen: DriverStatsScreen?
-    let driversStatsViewModel: DriverStatsViewModel = DriverStatsViewModel()
+    var driversDetailScreen: DriverDetailScreen?
+    let driversDetailViewModel: DriverDetailViewModel = DriverDetailViewModel()
     
-    weak private var delegate: DriverStatsViewControllerProtocol?
-    public func delegate(delegate: DriverStatsViewControllerProtocol?) {
+    weak private var delegate: DriverDetailViewControllerProtocol?
+    public func delegate(delegate: DriverDetailViewControllerProtocol?) {
         self.delegate = delegate
     }
 
     override func loadView() {
-        driversScreen = DriverStatsScreen()
-        view = driversScreen
+        driversDetailScreen = DriverDetailScreen()
+        view = driversDetailScreen
     }
 
     override func viewDidLoad() {
@@ -38,11 +38,11 @@ class DriverStatsViewController: UIViewController {
     }
     
     private func setupProtocols() {
-        driversStatsViewModel.delegate(delegate: self)
+        driversDetailViewModel.delegate(delegate: self)
     }
     
     private func loadData() {
-        driversStatsViewModel.fetch(.request)
+        driversDetailViewModel.fetch(.request)
     }
     
     private func addElements() {
@@ -50,7 +50,7 @@ class DriverStatsViewController: UIViewController {
     }
     
     lazy var backButton: UIButton = {
-        let button: UIButton = driversScreen?.backButton ?? UIButton()
+        let button: UIButton = driversDetailScreen?.backButton ?? UIButton()
         button.isSelected = true
         button.addTarget(self, action: #selector(backScreen), for: .touchUpInside)
         return button
@@ -63,24 +63,19 @@ class DriverStatsViewController: UIViewController {
 
 //MARK: - Extension config protocols
 
-extension DriverStatsViewController: UITableViewDelegate, UITableViewDataSource {
+extension DriverDetailViewController: UITableViewDelegate, UITableViewDataSource {
         
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return driversStatsViewModel.numberOfRows
+        return driversDetailViewModel.numberOfRows
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: DriverStatsCustomTableViewCell.identifier) as? DriverStatsCustomTableViewCell
-        cell?.setupCell(driver: driversStatsViewModel.loadCurrentDriver(indexPath: indexPath))
+        let cell = tableView.dequeueReusableCell(withIdentifier: DriverDetailCustomTableViewCell.identifier) as? DriverDetailCustomTableViewCell
+        cell?.setupCell(driver: driversDetailViewModel.loadCurrentRound(indexPath: indexPath))
         let backgroundView = UIView()
         backgroundView.backgroundColor = .none
         cell?.selectedBackgroundView = backgroundView
         return cell ?? UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DriverDetailViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -88,17 +83,17 @@ extension DriverStatsViewController: UITableViewDelegate, UITableViewDataSource 
     }
 }
 
-extension DriverStatsViewController: DriverStatsViewModelDelegate {
+extension DriverDetailViewController: DriverDetailViewModelDelegate {
     func success() {
-        driversScreen?.setupTableViewProtocols(delegate: self, dataSource: self)
+        driversDetailScreen?.setupTableViewProtocols(delegate: self, dataSource: self)
         reloadTableView()
     }
     func error(_ message: String) {
     }
 }
 
-extension DriverStatsViewController: DriverStatsViewModelProtocol {
+extension DriverDetailViewController: DriverDetailViewModelProtocol {
     func reloadTableView() {
-        self.driversScreen?.driversTableView.reloadData()
+        self.driversDetailScreen?.driversDetailTableView.reloadData()
     }
 }
