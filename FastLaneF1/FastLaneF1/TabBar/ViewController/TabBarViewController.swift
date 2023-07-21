@@ -32,7 +32,7 @@ class TabBarViewController: UITabBarController {
         viewControllers = [
             createNavigationController(for: HomeViewController(), title: "Home", image: UIImage(systemName: "house") ?? UIImage()),
             createNavigationController(for: ClassificationViewController(), title: "Standings", image: UIImage(systemName: "trophy.fill") ?? UIImage()),
-            createNavigationController(for: HomeViewController(), title: "Drivers Stats", image: UIImage(systemName: "speedometer") ?? UIImage()),
+            createNavigationController(for: DriverStatsViewController(), title: "Drivers Stats", image: UIImage(systemName: "speedometer") ?? UIImage()),
             createNavigationController(for: ScheduleViewController(), title: "Schedule", image: UIImage(systemName: "doc.text.magnifyingglass") ?? UIImage()),
         ]}
     

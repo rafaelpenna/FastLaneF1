@@ -1,13 +1,13 @@
 //
-//  DriverCustomCellViewModel.swift
+//  DriverStatsCustomCellViewModel.swift
 //  FastLaneF1
 //
-//  Created by Rafael Penna on 19/07/23.
+//  Created by Rafael Penna on 21/07/23.
 //
 
 import UIKit
 
-class DriversCustomCellViewModel {
+class DriverStatsCustomCellViewModel {
     
     private var data: DriverStandingDriversModel
     
@@ -72,11 +72,53 @@ class DriversCustomCellViewModel {
         return data.driver.familyName
     }
     
-    public var getTeam: String {
-        return data.constructors[0].name
+    public var getTeamCar: UIImage {
+        if data.constructors[0].name == "Red Bull" {
+            return UIImage(named: "redbullcar") ?? UIImage()
+        } else if data.constructors[0].name == "Mercedes" {
+            return UIImage(named: "mercedescar") ?? UIImage()
+        } else if data.constructors[0].name == "Aston Martin" {
+            return UIImage(named: "astonmartincar") ?? UIImage()
+        } else if data.constructors[0].name == "Ferrari" {
+            return UIImage(named: "ferraricar") ?? UIImage()
+        } else if data.constructors[0].name == "McLaren" {
+            return UIImage(named: "mclarencar") ?? UIImage()
+        } else if data.constructors[0].name == "Alpine F1 Team" {
+            return UIImage(named: "alpinecar") ?? UIImage()
+        } else if data.constructors[0].name == "Haas F1 Team" {
+            return UIImage(named: "haascar") ?? UIImage()
+        } else if data.constructors[0].name == "Williams" {
+            return UIImage(named: "williamscar") ?? UIImage()
+        } else if data.constructors[0].name == "AlphaTauri" {
+            return UIImage(named: "alphatauricar") ?? UIImage()
+        } else if data.constructors[0].name == "Alfa Romeo" {
+            return UIImage(named: "alfaromeocar") ?? UIImage()
+        }
+        return UIImage()
     }
     
-    public var getPoints: String {
-        return data.points
+    public var getTeamsBackground: UIImage {
+        if data.constructors[0].name == "Red Bull" {
+            return UIImage(named: "redbullbackground") ?? UIImage()
+        } else if data.constructors[0].name == "Mercedes" {
+            return UIImage(named: "mercedesbackground") ?? UIImage()
+        } else if data.constructors[0].name == "Aston Martin" {
+            return UIImage(named: "astonmartinbackground") ?? UIImage()
+        } else if data.constructors[0].name == "Ferrari" {
+            return UIImage(named: "ferraribackground") ?? UIImage()
+        } else if data.constructors[0].name == "McLaren" {
+            return UIImage(named: "mclarenbackground") ?? UIImage()
+        } else if data.constructors[0].name == "Alpine F1 Team" {
+            return UIImage(named: "alpinebackground") ?? UIImage()
+        } else if data.constructors[0].name == "Haas F1 Team" {
+            return UIImage(named: "haasbackground") ?? UIImage()
+        } else if data.constructors[0].name == "Williams" {
+            return UIImage(named: "williamsbackground") ?? UIImage()
+        } else if data.constructors[0].name == "AlphaTauri" {
+            return UIImage(named: "alphatauribackground") ?? UIImage()
+        } else if data.constructors[0].name == "Alfa Romeo" {
+            return UIImage(named: "alfaromeobackground") ?? UIImage()
+        }
+        return UIImage()
     }
 }
