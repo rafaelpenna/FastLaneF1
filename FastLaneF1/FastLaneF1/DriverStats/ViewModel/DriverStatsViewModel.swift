@@ -75,6 +75,10 @@ class DriverStatsViewModel {
         return dataDriversScreen[indexPath.row].driver.familyName
     }
     
+    public func getDriverId(indexPath: IndexPath) -> String {
+        return dataDriversScreen[indexPath.row].driver.driverID
+    }
+    
     public func getTeam(indexPath: IndexPath) -> String {
         return dataDriversScreen[indexPath.row].constructors[2].name
     }

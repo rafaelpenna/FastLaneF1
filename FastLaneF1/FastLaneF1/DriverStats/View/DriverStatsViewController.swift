@@ -81,6 +81,9 @@ extension DriverStatsViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DriverDetailViewController()
         self.navigationController?.pushViewController(vc, animated: true)
+        vc.selectedDriver = driversStatsViewModel.getDriverId(indexPath: indexPath)
+        vc.givenNameDriver = driversStatsViewModel.getDriverName(indexPath: indexPath)
+        vc.lastNameDriver = driversStatsViewModel.getDriverLastName(indexPath: indexPath)
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -26,6 +26,7 @@ class DriverDetailViewModel {
 
     private weak var delegate: DriverDetailViewModelDelegate?
     private var dataDriversDetail:[DriverDetailRace] = []
+    public var selectedDriver = ""
     
     public func delegate(delegate: DriverDetailViewModelDelegate?) {
         self.delegate = delegate
@@ -43,7 +44,7 @@ class DriverDetailViewModel {
                 }
             }
         case .request:
-            self.service.getDriversDetailData(fromURL: "https://ergast.com/api/f1/current/drivers/alonso/results.json") { success, error in
+            self.service.getDriversDetailData(fromURL: "https://ergast.com/api/f1/current/drivers/\(selectedDriver)/results.json") { success, error in
                 if let success = success {
                     self.dataDriversDetail = success.mrData.raceTable.races
                     self.delegate?.success()
@@ -56,7 +57,7 @@ class DriverDetailViewModel {
     
     //MARK: - Functions to get info to TableView Drivers Detail
     
-    public var numberOfRows:Int{
+    public var numberOfRows: Int {
         return dataDriversDetail.count
     }
     
