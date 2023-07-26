@@ -30,18 +30,12 @@ struct DriversDetailMRData: Codable {
 
 struct DriversDetailRaceTable: Codable {
     let season: String
-    let driverID: DriverID
     let races: [DriverDetailRace]
 
     enum CodingKeys: String, CodingKey {
         case season
-        case driverID = "driverId"
         case races = "Races"
     }
-}
-
-enum DriverID: String, Codable {
-    case alonso = "alonso"
 }
 
 struct DriverDetailRace: Codable {
