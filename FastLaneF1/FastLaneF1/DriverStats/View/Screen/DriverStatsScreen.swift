@@ -29,7 +29,7 @@ class DriverStatsScreen: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .darkColorApp
+        tableView.backgroundColor = .black
         tableView.register(DriverStatsCustomTableViewCell.self, forCellReuseIdentifier: DriverStatsCustomTableViewCell.identifier)
         return tableView
     }()

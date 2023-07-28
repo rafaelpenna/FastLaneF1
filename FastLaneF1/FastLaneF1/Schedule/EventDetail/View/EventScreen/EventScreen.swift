@@ -148,6 +148,7 @@ class StandingsScreen: UIView {
             
             circuitCountryLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             circuitCountryLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            circuitCountryLabel.heightAnchor.constraint(equalToConstant: 35),
             
             backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
             backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
@@ -156,9 +157,11 @@ class StandingsScreen: UIView {
             
             standingsButton.topAnchor.constraint(equalTo: circuitCountryLabel.bottomAnchor, constant: 15),
             standingsButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
+            standingsButton.heightAnchor.constraint(equalToConstant: 30),
             
             trackButton.topAnchor.constraint(equalTo: circuitCountryLabel.bottomAnchor, constant: 15),
             trackButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
+            trackButton.heightAnchor.constraint(equalToConstant: 30),
             
             trackTableView.topAnchor.constraint(equalTo: standingsButton.bottomAnchor, constant: 5),
             trackTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -187,7 +190,7 @@ class StandingsScreen: UIView {
             standingsTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             standingsTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
 
-            resultsLoadFailLabel.topAnchor.constraint(equalTo: eventSoonLabel.bottomAnchor, constant: 150),
+            resultsLoadFailLabel.topAnchor.constraint(equalTo: circuitCountryLabel.bottomAnchor, constant: 150),
             resultsLoadFailLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
             resultsLoadFailLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
         ])

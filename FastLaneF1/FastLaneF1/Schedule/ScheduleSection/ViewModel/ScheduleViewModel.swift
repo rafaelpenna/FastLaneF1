@@ -81,4 +81,49 @@ class ScheduleViewModel {
     public func getRaceMonth(indexPath: IndexPath) -> String {
         return dataScheduleScreen[indexPath.row].date
     }
+    
+//    public func getRaceFlag(indexPath: IndexPath) -> UIImage {
+//        if dataScheduleScreen[indexPath.row].circuit.location.country == "Bahrain" {
+//            return UIImage(systemName: "bahrain") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Saudi Arabia" {
+//            return UIImage(systemName: "saudiarabia") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Australia" {
+//            return UIImage(systemName: "australia") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Azerbaijan" {
+//            return UIImage(systemName: "azerbaijan") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "USA" {
+//            return UIImage(systemName: "us") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Monaco" {
+//            return UIImage(systemName: "monaco") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Spain" {
+//            return UIImage(systemName: "spain") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Canada" {
+//            return UIImage(systemName: "canada") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Austria" {
+//            return UIImage(systemName: "austria") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "UK" {
+//            return UIImage(systemName: "uk") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Hungary" {
+//            return UIImage(systemName: "hungary") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Netherlands" {
+//            return UIImage(systemName: "netherland") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Belgium" {
+//            return UIImage(systemName: "belgium") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Italy" {
+//            return UIImage(systemName: "italy") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Singapore" {
+//            return UIImage(systemName: "singapore") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Japan" {
+//            return UIImage(systemName: "japan") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Qatar" {
+//            return UIImage(systemName: "qatar") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Mexico" {
+//            return UIImage(systemName: "mexico") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Brazil" {
+//            return UIImage(systemName: "brazil") ?? UIImage()
+//        } else if dataScheduleScreen[indexPath.row].circuit.location.country == "Abu Dhabi" {
+//            return UIImage(systemName: "abudhabi") ?? UIImage()
+//        }
+//        return UIImage()
+//    }
 }

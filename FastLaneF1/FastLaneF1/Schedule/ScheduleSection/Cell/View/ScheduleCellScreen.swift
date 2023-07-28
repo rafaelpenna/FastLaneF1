@@ -9,16 +9,12 @@ import UIKit
 
 class ScheduleCellScreen: UIView {
     
-    lazy var flagView: UILabel = {
-        let label = UILabel()
+    lazy var flagView: UIImageView = {
+        let label = UIImageView()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 15)
-        label.layer.borderColor = UIColor.white.cgColor
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 8
-        label.backgroundColor = .white
+        label.contentMode = .scaleAspectFit
         return label
     }()
     
@@ -137,7 +133,7 @@ class ScheduleCellScreen: UIView {
             
             dayLabel.topAnchor.constraint(equalTo: roundLabel.bottomAnchor, constant: -5),
             dayLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            dayLabel.widthAnchor.constraint(equalToConstant: 85),
+            dayLabel.widthAnchor.constraint(equalToConstant: 90),
             
             monthLabel.topAnchor.constraint(equalTo: dayLabel.bottomAnchor, constant: 4),
             monthLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),

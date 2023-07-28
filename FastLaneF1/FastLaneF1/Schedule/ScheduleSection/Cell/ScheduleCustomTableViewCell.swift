@@ -35,6 +35,7 @@ class ScheduleCustomTableViewCell: UITableViewCell {
     func setupCell(driver:RaceScheduleModel){
         viewModel = ScheduleCellViewModel(data: driver)
         backgroundColor = .none
+        screen.flagView.image = viewModel?.getCoutryFlag
         screen.roundLabel.text = "Round \(viewModel!.getRaceRound)"
         screen.countryLabel.text = viewModel?.getRaceCountry
         screen.nameEventLabel.text = viewModel?.getRaceDescription

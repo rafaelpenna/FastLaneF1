@@ -173,6 +173,8 @@ extension DriverDetailViewController {
             return UIImage(named: "logan") ?? UIImage()
         } else if familyNameLabel.text == "Leclerc" {
             return UIImage(named: "charles") ?? UIImage()
+        } else if familyNameLabel.text == "Ricciardo" {
+            return UIImage(named: "ricciardo") ?? UIImage()
         }
         return UIImage()
     }

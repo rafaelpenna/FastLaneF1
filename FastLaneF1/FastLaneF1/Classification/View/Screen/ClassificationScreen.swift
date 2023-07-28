@@ -45,7 +45,7 @@ class ClassificationScreen: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .darkColorApp
+        tableView.backgroundColor = .black
         tableView.register(DriversCustomTableViewCell.self, forCellReuseIdentifier: DriversCustomTableViewCell.identifier)
         return tableView
     }()
@@ -54,7 +54,7 @@ class ClassificationScreen: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .darkColorApp
+        tableView.backgroundColor = .black
         tableView.register(ConstructorTableViewCell.self, forCellReuseIdentifier: ConstructorTableViewCell.identifier)
         return tableView
     }()

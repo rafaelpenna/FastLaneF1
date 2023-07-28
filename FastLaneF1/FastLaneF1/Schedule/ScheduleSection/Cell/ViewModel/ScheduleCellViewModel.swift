@@ -31,9 +31,9 @@ class ScheduleCellViewModel {
         if (Int(String(data.date.suffix(2))) ?? 00) - 2 >= 10 {
             return String((Int(data.date.suffix(2)) ?? 00) - 2)
         } else if String(data.date.suffix(5)) == "04-02" {
-            return "31/03"
+            return "03/31"
         } else if String(data.date.suffix(5)) == "07-02" {
-            return "30/06"
+            return "06/30"
         } else {
             return String("\(0)\((Int(data.date.suffix(2)) ?? 00) - 2)")
         }
@@ -78,5 +78,50 @@ class ScheduleCellViewModel {
             return "DEC"
         }
         return " "
+    }
+    
+    public var getCoutryFlag: UIImage {
+        if data.circuit.location.country == "Bahrain" {
+            return UIImage(named: "bahrain") ?? UIImage()
+        } else if data.circuit.location.country == "Saudi Arabia" {
+            return UIImage(named: "saudiarabia") ?? UIImage()
+        } else if data.circuit.location.country == "Australia" {
+            return UIImage(named: "australia") ?? UIImage()
+        } else if data.circuit.location.country == "Azerbaijan" {
+            return UIImage(named: "azerbaijan") ?? UIImage()
+        } else if data.circuit.location.country == "USA" || data.circuit.location.country == "United States" {
+            return UIImage(named: "us") ?? UIImage()
+        } else if data.circuit.location.country == "Monaco" {
+            return UIImage(named: "monaco") ?? UIImage()
+        } else if data.circuit.location.country == "Spain" {
+            return UIImage(named: "spain") ?? UIImage()
+        } else if data.circuit.location.country == "Canada" {
+            return UIImage(named: "canada") ?? UIImage()
+        } else if data.circuit.location.country == "Austria" {
+            return UIImage(named: "austria") ?? UIImage()
+        } else if data.circuit.location.country == "UK" {
+            return UIImage(named: "uk") ?? UIImage()
+        } else if data.circuit.location.country == "Hungary" {
+            return UIImage(named: "hungary") ?? UIImage()
+        } else if data.circuit.location.country == "Netherlands" {
+            return UIImage(named: "netherland") ?? UIImage()
+        } else if data.circuit.location.country == "Belgium" {
+            return UIImage(named: "belgium") ?? UIImage()
+        } else if data.circuit.location.country == "Italy" {
+            return UIImage(named: "italy") ?? UIImage()
+        } else if data.circuit.location.country == "Singapore" {
+            return UIImage(named: "singapore") ?? UIImage()
+        } else if data.circuit.location.country == "Japan" {
+            return UIImage(named: "japan") ?? UIImage()
+        } else if data.circuit.location.country == "Qatar" {
+            return UIImage(named: "qatar") ?? UIImage()
+        } else if data.circuit.location.country == "Mexico" {
+            return UIImage(named: "mexico") ?? UIImage()
+        } else if data.circuit.location.country == "Brazil" {
+            return UIImage(named: "brazil") ?? UIImage()
+        } else if data.circuit.location.country == "UAE" {
+            return UIImage(named: "abudhabi") ?? UIImage()
+        }
+        return UIImage()
     }
 }
