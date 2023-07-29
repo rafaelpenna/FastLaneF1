@@ -34,7 +34,7 @@ class DriversCustomTableViewCell: UITableViewCell {
     }
     
     private func backgroundColor() {
-        backgroundColor = .none
+        backgroundColor = .darkColorApp
     }
 
     func setupCell(driver: DriverStandingDriversModel){

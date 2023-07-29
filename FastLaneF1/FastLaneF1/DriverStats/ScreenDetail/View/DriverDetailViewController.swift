@@ -126,7 +126,9 @@ extension DriverDetailViewController: DriverDetailViewModelDelegate {
 
 extension DriverDetailViewController: DriverDetailViewModelProtocol {
     func reloadTableView() {
-        self.driversDetailScreen?.driversDetailTableView.reloadData()
+        DispatchQueue.main.async {
+            self.driversDetailScreen?.driversDetailTableView.reloadData()
+        }
     }
 }
 
@@ -173,6 +175,8 @@ extension DriverDetailViewController {
             return UIImage(named: "logan") ?? UIImage()
         } else if familyNameLabel.text == "Leclerc" {
             return UIImage(named: "charles") ?? UIImage()
+        } else if familyNameLabel.text == "Ricciardo" {
+            return UIImage(named: "ricciardo") ?? UIImage()
         }
         return UIImage()
     }
@@ -201,5 +205,4 @@ extension DriverDetailViewController {
         }
         return UIImage()
     }
-    
 }

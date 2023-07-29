@@ -61,22 +61,10 @@ class StandingsScreen: UIView {
         return background
     }()
     
-    lazy var resultsLoadFailLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Estamos tendo problemas para carregar os resultados. Por favor tente novamente em instantes."
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.isHidden = true
-        return label
-    }()
-    
     lazy var eventSoonLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Este evento ocorrerá em breve."
+        label.text = "This event will occur soon."
         label.textAlignment = .center
         label.numberOfLines = 0
         label.textColor = .white
@@ -135,7 +123,6 @@ class StandingsScreen: UIView {
         addSubview(eventSoonLabel)
         standingsBoardView.self.addSubview(standingsHeader)
         standingsBoardView.self.addSubview(standingsTableView)
-        standingsBoardView.self.addArrangedSubview(resultsLoadFailLabel)
         addSubview(trackTableView)
     }
     
@@ -148,6 +135,7 @@ class StandingsScreen: UIView {
             
             circuitCountryLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             circuitCountryLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            circuitCountryLabel.heightAnchor.constraint(equalToConstant: 35),
             
             backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
             backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
@@ -156,9 +144,11 @@ class StandingsScreen: UIView {
             
             standingsButton.topAnchor.constraint(equalTo: circuitCountryLabel.bottomAnchor, constant: 15),
             standingsButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
+            standingsButton.heightAnchor.constraint(equalToConstant: 30),
             
             trackButton.topAnchor.constraint(equalTo: circuitCountryLabel.bottomAnchor, constant: 15),
             trackButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
+            trackButton.heightAnchor.constraint(equalToConstant: 30),
             
             trackTableView.topAnchor.constraint(equalTo: standingsButton.bottomAnchor, constant: 5),
             trackTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -186,10 +176,6 @@ class StandingsScreen: UIView {
             standingsTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             standingsTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             standingsTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
-
-            resultsLoadFailLabel.topAnchor.constraint(equalTo: eventSoonLabel.bottomAnchor, constant: 150),
-            resultsLoadFailLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
-            resultsLoadFailLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
         ])
     }
 }

@@ -71,6 +71,8 @@ extension ScheduleViewController: ScheduleViewModelDelegate {
 
 extension ScheduleViewController: ScheduleViewModelProtocol {
     func reloadTableView() {
-        self.racesScreen?.infoRacesTableView.reloadData()
+        DispatchQueue.main.async {
+            self.racesScreen?.infoRacesTableView.reloadData()
+        }
     }
 }

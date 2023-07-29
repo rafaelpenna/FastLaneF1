@@ -41,12 +41,15 @@ class ScheduleViewModel {
                 }
             }
         case .request:
-            self.service.getScheduleData(fromURL: "https://ergast.com/api/f1/current.json") { success, error in
-                if let success = success {
-                    self.dataScheduleScreen = success.mrData.raceTable.races
-                    self.delegate?.success()
-                } else {
-                    self.delegate?.error(error?.localizedDescription ?? "")
+            self.service.getScheduleData(fromURL: "https://ergast.com/api/f1/current.json") { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case let .failure(error):
+                        print(error)
+                    case let .success(dataScheduleScreen):
+                        self.dataScheduleScreen = dataScheduleScreen.mrData.raceTable.races
+                        self.delegate?.success()
+                    }
                 }
             }
         }

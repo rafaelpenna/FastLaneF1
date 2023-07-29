@@ -44,16 +44,20 @@ class ClassificationConstructorViewModel {
                 }
             }
         case .request:
-            self.teamsService.getConstructorData(fromURL: "https://ergast.com/api/f1/current/constructorStandings.json") { success, error in
-                if let success = success {
-                    self.dataTeams = success.mrData.standingsTable.standingsLists[0].constructorStandings
-                    self.delegate?.success()
-                } else {
-                    self.delegate?.error(error?.localizedDescription ?? "")
+            self.teamsService.getConstructorData(fromURL: "https://ergast.com/api/f1/current/constructorStandings.json") { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case let .failure(error):
+                        print(error)
+                    case let .success(dataTeams):
+                        self.dataTeams = dataTeams.mrData.standingsTable.standingsLists[0].constructorStandings
+                        self.delegate?.success()
+                    }
                 }
             }
         }
     }
+
     
     public var numberOfRowsTeams:Int{
         return dataTeams.count

@@ -60,6 +60,8 @@ class DriverStatsCustomCellViewModel {
             return UIImage(named: "logan") ?? UIImage()
         } else if data.driver.familyName == "Leclerc" {
             return UIImage(named: "charles") ?? UIImage()
+        } else if data.driver.familyName == "Ricciardo" {
+            return UIImage(named: "ricciardo") ?? UIImage()
         }
         return UIImage()
     }

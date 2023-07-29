@@ -6,25 +6,36 @@
 //
 
 import UIKit
-import Alamofire
 
 protocol CircuitServiceDelegate: GenericService {
     func getCircuitDataFromJson(fromFileName name: String, completion: completion<CircuitModel?>)
-    func getCircuitData(fromURL url: String, completion: @escaping completion<CircuitModel?>)
+    func getCircuitData(fromURL url: String, completion: @escaping (Result<CircuitModel, Error>) -> Void)
 }
 
 class CircuitService: CircuitServiceDelegate {
-    func getCircuitData(fromURL url: String, completion: @escaping completion<CircuitModel?>) {
-        let url: String = url
-        
-        AF.request(url, method: .get).validate().responseDecodable(of: CircuitModel.self) { response in
-            switch response.result {
-            case .success(let success):
-                completion(success, nil)
-            case .failure(let error):
-                completion(nil, Error.errorRequest(error))
-            }
+    func getCircuitData(fromURL url: String, completion: @escaping (Result<CircuitModel, Error>) -> Void) {
+        guard let url = URL(string: url) else {
+            return completion(.failure(Error.errorUrl(urlString: url)))
         }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            DispatchQueue.main.async {
+                if let error {
+                    return completion(.failure(Error.errorURLRequest(error)))
+                }
+                
+                guard let data = data else {
+                    return completion(.failure(Error.errorDetail(detail: "Error Data")))
+                }
+                
+                do {
+                    let standing = try JSONDecoder().decode(CircuitModel.self, from: data)
+                    completion(.success(standing))
+                } catch {
+                    completion(.failure(Error.errorURLRequest(error)))
+                }
+            }
+        }.resume()
     }
     
     func getCircuitDataFromJson(fromFileName name: String, completion: completion<CircuitModel?>) {

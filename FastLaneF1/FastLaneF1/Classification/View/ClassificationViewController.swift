@@ -164,7 +164,9 @@ extension ClassificationViewController: DriversViewModelDelegate, ConstructorVie
 
 extension ClassificationViewController: DriversViewModelProtocol {
     func reloadTableView() {
-        self.driversScreen?.driversTableView.reloadData()
-        self.driversScreen?.constructorTableView.reloadData()
+        DispatchQueue.main.async {
+            self.driversScreen?.driversTableView.reloadData()
+            self.driversScreen?.constructorTableView.reloadData()
+        }
     }
 }

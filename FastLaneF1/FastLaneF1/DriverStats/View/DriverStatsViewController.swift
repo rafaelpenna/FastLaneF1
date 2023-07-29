@@ -102,6 +102,8 @@ extension DriverStatsViewController: DriverStatsViewModelDelegate {
 
 extension DriverStatsViewController: DriverStatsViewModelProtocol {
     func reloadTableView() {
-        self.driversScreen?.driversTableView.reloadData()
+        DispatchQueue.main.async {
+            self.driversScreen?.driversTableView.reloadData()
+        }
     }
 }

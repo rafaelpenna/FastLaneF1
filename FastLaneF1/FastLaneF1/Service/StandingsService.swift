@@ -7,25 +7,36 @@
 
 
 import UIKit
-import Alamofire
 
 protocol StandingsServiceDelegate: GenericService {
     func getStandingsDataFromJson(fromFileName name: String, completion: completion<EventModel?>)
-    func getStandingsData(fromURL url: String, completion: @escaping completion<EventModel?>)
+    func getStandingsData(fromURL url: String, completion: @escaping (Result<EventModel, Error>) -> Void)
 }
 
 class StandingsService: StandingsServiceDelegate {
-    func getStandingsData(fromURL url: String, completion: @escaping completion<EventModel?>) {
-        let url: String = url
-        
-        AF.request(url, method: .get).validate().responseDecodable(of: EventModel.self) { response in
-            switch response.result {
-            case .success(let success):
-                completion(success, nil)
-            case .failure(let error):
-                completion(nil, Error.errorRequest(error))
-            }
+    func getStandingsData(fromURL url: String, completion: @escaping (Result<EventModel, Error>) -> Void) {
+        guard let url = URL(string: url) else {
+            return completion(.failure(Error.errorUrl(urlString: url)))
         }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            DispatchQueue.main.async {
+                if let error {
+                    return completion(.failure(Error.errorURLRequest(error)))
+                }
+                
+                guard let data = data else {
+                    return completion(.failure(Error.errorDetail(detail: "Error Data")))
+                }
+                
+                do {
+                    let standing = try JSONDecoder().decode(EventModel.self, from: data)
+                    completion(.success(standing))
+                } catch {
+                    completion(.failure(Error.errorURLRequest(error)))
+                }
+            }
+        }.resume()
     }
     
     func getStandingsDataFromJson(fromFileName name: String, completion: completion<EventModel?>) {

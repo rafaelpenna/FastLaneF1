@@ -11,14 +11,9 @@ class UpcomingEventCell: UITableViewCell {
     
     static let identifier = String(describing: UpcomingEventCell.self)
     
-    var upcomingLabel: UILabel = {
-        let label = UILabel()
+    var upcomingLabel: UIButton = {
+        let label = UIButton()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "UPCOMING EVENT"
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 20)
-        label.textAlignment = .center
-        label.numberOfLines = 0
         label.layer.backgroundColor = UIColor.darkGray.cgColor
         return label
     }()
