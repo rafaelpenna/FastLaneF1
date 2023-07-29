@@ -42,12 +42,15 @@ class ClassificationDriverViewModel {
                 }
             }
         case .request:
-            self.service.getDriversData(fromURL: "https://ergast.com/api/f1/current/driverStandings.json") { success, error in
-                if let success = success {
-                    self.dataDriversScreen = success.mrData.standingsTable.standingsLists[0].driverStandings
-                    self.delegate?.success()
-                } else {
-                    self.delegate?.error(error?.localizedDescription ?? "")
+            self.service.getDriversData(fromURL: "https://ergast.com/api/f1/current/driverStandings.json") { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case let .failure(error):
+                        print(error)
+                    case let .success(dataDriversScreen):
+                        self.dataDriversScreen = dataDriversScreen.mrData.standingsTable.standingsLists[0].driverStandings
+                        self.delegate?.success()
+                    }
                 }
             }
         }

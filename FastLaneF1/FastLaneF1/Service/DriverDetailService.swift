@@ -6,26 +6,36 @@
 //
 
 import UIKit
-import Alamofire
 
 protocol DriverDetailServiceDelegate: GenericService {
     func getDriversDetailDataFromJson(fromFileName name: String, completion: completion<DriversDetailModel?>)
-    func getDriversDetailData(fromURL url: String, completion: @escaping completion<DriversDetailModel?>)
+    func getDriversDetailData(fromURL url: String, completion: @escaping (Result<DriversDetailModel, Error>) -> Void)
 }
 
 class DriversDetailService: DriverDetailServiceDelegate {
-    
-    func getDriversDetailData(fromURL url: String, completion: @escaping completion<DriversDetailModel?>) {
-        let url: String = url
-        
-        AF.request(url, method: .get).validate().responseDecodable(of: DriversDetailModel.self) { response in
-            switch response.result {
-            case .success(let success):
-                completion(success, nil)
-            case .failure(let error):
-                completion(nil, Error.errorRequest(error))
-            }
+    func getDriversDetailData(fromURL url: String, completion: @escaping (Result<DriversDetailModel, Error>) -> Void) {
+        guard let url = URL(string: url) else {
+            return completion(.failure(Error.errorUrl(urlString: url)))
         }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            DispatchQueue.main.async {
+                if let error {
+                    return completion(.failure(Error.errorURLRequest(error)))
+                }
+                
+                guard let data = data else {
+                    return completion(.failure(Error.errorDetail(detail: "Error Data")))
+                }
+                
+                do {
+                    let standing = try JSONDecoder().decode(DriversDetailModel.self, from: data)
+                    completion(.success(standing))
+                } catch {
+                    completion(.failure(Error.errorURLRequest(error)))
+                }
+            }
+        }.resume()
     }
     
     func getDriversDetailDataFromJson(fromFileName name: String, completion: completion<DriversDetailModel?>) {

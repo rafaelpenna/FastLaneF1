@@ -6,25 +6,36 @@
 //
 
 import UIKit
-import Alamofire
 
 protocol ConstrcutorServiceDelegate: GenericService {
     func getConstructorDataFromJson(fromFileName name: String, completion: completion<ConstructorModel?>)
-    func getConstructorData(fromURL url: String, completion: @escaping completion<ConstructorModel?>)
+    func getConstructorData(fromURL url: String, completion: @escaping (Result<ConstructorModel, Error>) -> Void)
 }
 
 class ConstrcutorService: ConstrcutorServiceDelegate {
-    func getConstructorData(fromURL url: String, completion: @escaping completion<ConstructorModel?>) {
-        let url: String = url
-        
-        AF.request(url, method: .get).validate().responseDecodable(of: ConstructorModel.self) { response in
-            switch response.result {
-            case .success(let success):
-                completion(success, nil)
-            case .failure(let error):
-                completion(nil, Error.errorRequest(error))
-            }
+    func getConstructorData(fromURL url: String, completion: @escaping (Result<ConstructorModel, Error>) -> Void) {
+        guard let url = URL(string: url) else {
+            return completion(.failure(Error.errorUrl(urlString: url)))
         }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            DispatchQueue.main.async {
+                if let error {
+                    return completion(.failure(Error.errorURLRequest(error)))
+                }
+                
+                guard let data = data else {
+                    return completion(.failure(Error.errorDetail(detail: "Error Data")))
+                }
+                
+                do {
+                    let constructor = try JSONDecoder().decode(ConstructorModel.self, from: data)
+                    completion(.success(constructor))
+                } catch {
+                    completion(.failure(Error.errorURLRequest(error)))
+                }
+            }
+        }.resume()
     }
     
     func getConstructorDataFromJson(fromFileName name: String, completion: completion<ConstructorModel?>) {

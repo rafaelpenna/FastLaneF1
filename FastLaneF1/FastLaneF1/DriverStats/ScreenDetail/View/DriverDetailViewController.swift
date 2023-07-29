@@ -126,7 +126,9 @@ extension DriverDetailViewController: DriverDetailViewModelDelegate {
 
 extension DriverDetailViewController: DriverDetailViewModelProtocol {
     func reloadTableView() {
-        self.driversDetailScreen?.driversDetailTableView.reloadData()
+        DispatchQueue.main.async {
+            self.driversDetailScreen?.driversDetailTableView.reloadData()
+        }
     }
 }
 
@@ -203,5 +205,4 @@ extension DriverDetailViewController {
         }
         return UIImage()
     }
-    
 }

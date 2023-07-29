@@ -6,28 +6,38 @@
 //
 
 import UIKit
-import Alamofire
 
 protocol DriverServiceDelegate: GenericService {
     func getDriversDataFromJson(fromFileName name: String, completion: completion<DriversModel?>)
-    func getDriversData(fromURL url: String, completion: @escaping completion<DriversModel?>)
+    func getDriversData(fromURL url: String, completion: @escaping (Result<DriversModel, Error>) -> Void)
 }
 
 class DriversService: DriverServiceDelegate {
-    
-    func getDriversData(fromURL url: String, completion: @escaping completion<DriversModel?>) {
-        let url: String = url
-        
-        AF.request(url, method: .get).validate().responseDecodable(of: DriversModel.self) { response in
-            switch response.result {
-            case .success(let success):
-                completion(success, nil)
-            case .failure(let error):
-                completion(nil, Error.errorRequest(error))
-            }
+    func getDriversData(fromURL url: String, completion: @escaping (Result<DriversModel, Error>) -> Void) {
+        guard let url = URL(string: url) else {
+            return completion(.failure(Error.errorUrl(urlString: url)))
         }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            DispatchQueue.main.async {
+                if let error {
+                    return completion(.failure(Error.errorURLRequest(error)))
+                }
+                
+                guard let data = data else {
+                    return completion(.failure(Error.errorDetail(detail: "Error Data")))
+                }
+                
+                do {
+                    let driver = try JSONDecoder().decode(DriversModel.self, from: data)
+                    completion(.success(driver))
+                } catch {
+                    completion(.failure(Error.errorURLRequest(error)))
+                }
+            }
+        }.resume()
     }
-    
+
     func getDriversDataFromJson(fromFileName name: String, completion: completion<DriversModel?>) {
         if let name = Bundle.main.url(forResource: name, withExtension: "json"){
             do {

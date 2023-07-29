@@ -44,12 +44,15 @@ class DriverDetailViewModel {
                 }
             }
         case .request:
-            self.service.getDriversDetailData(fromURL: "https://ergast.com/api/f1/current/drivers/\(selectedDriver)/results.json") { success, error in
-                if let success = success {
-                    self.dataDriversDetail = success.mrData.raceTable.races
-                    self.delegate?.success()
-                } else {
-                    self.delegate?.error(error?.localizedDescription ?? "")
+            self.service.getDriversDetailData(fromURL: "https://ergast.com/api/f1/current/drivers/\(selectedDriver)/results.json") { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case let .failure(error):
+                        print(error)
+                    case let .success(dataDriversDetail):
+                        self.dataDriversDetail = dataDriversDetail.mrData.raceTable.races
+                        self.delegate?.success()
+                    }
                 }
             }
         }

@@ -225,20 +225,18 @@ extension StandingsViewController: UITableViewDelegate, UITableViewDataSource {
 extension StandingsViewController: StandingsViewModelDelegate {
     func success() {
         standingsScreen?.setupTableViewProtocols(delegate: self, dataSource: self)
-        standingsScreen?.resultsLoadFailLabel.isHidden = true
-        standingsScreen?.eventSoonLabel.isHidden = false
         reloadTableView()
     }
     
     func error(_ message: String) {
-        standingsScreen?.resultsLoadFailLabel.isHidden = false
-        standingsScreen?.eventSoonLabel.isHidden = true
     }
 }
 
 extension StandingsViewController: StandingsViewModelProtocol {
     func reloadTableView() {
-        self.standingsScreen?.standingsTableView.reloadData()
-        self.standingsScreen?.trackTableView.reloadData()
+        DispatchQueue.main.async {
+            self.standingsScreen?.standingsTableView.reloadData()
+            self.standingsScreen?.trackTableView.reloadData()
+        }
     }
 }

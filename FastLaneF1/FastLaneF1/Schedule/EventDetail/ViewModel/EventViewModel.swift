@@ -49,17 +49,20 @@ class StandingsViewModel {
                 }
             }
         case .request:
-            self.standingsService.getStandingsData(fromURL: "https://ergast.com/api/f1/2023/\(selectedRound + 1)/results.json") { success, error in
-                if let success = success {
-                    if success.mrData.raceTable.races.isEmpty == false {
-                        self.dataStandings = success.mrData.raceTable.races[0].results
-                    } else {
-                        self.dataStandings = []
+            self.standingsService.getStandingsData(fromURL: "https://ergast.com/api/f1/2023/\(selectedRound + 1)/results.json") { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case let .failure(error):
+                        print(error)
+                    case let .success(dataStandings):
+                        if dataStandings.mrData.raceTable.races.isEmpty == false {
+                            self.dataStandings = dataStandings.mrData.raceTable.races[0].results
+                        } else {
+                            self.dataStandings = []
+                        }
+                        self.delegate?.success()
+                        self.bestLapFunctions()
                     }
-                    self.delegate?.success()
-                    self.bestLapFunctions()
-                } else {
-                    self.delegate?.error(error?.localizedDescription ?? "")
                 }
             }
         }
