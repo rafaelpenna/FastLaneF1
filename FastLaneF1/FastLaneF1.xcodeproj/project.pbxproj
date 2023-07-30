@@ -40,7 +40,7 @@
 		1C98C7FD2A67188200F93653 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C7FC2A67188200F93653 /* ScheduleViewModel.swift */; };
 		1C98C7FF2A6718BF00F93653 /* ScheduleCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C7FE2A6718BF00F93653 /* ScheduleCellScreen.swift */; };
 		1C98C8012A6718E600F93653 /* ScheduleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8002A6718E600F93653 /* ScheduleCellViewModel.swift */; };
-		1C98C8032A67191900F93653 /* ScheduleCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8022A67191900F93653 /* ScheduleCustomTableViewCell.swift */; };
+		1C98C8032A67191900F93653 /* ScheduleCustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8022A67191900F93653 /* ScheduleCustomCollectionViewCell.swift */; };
 		1C98C8052A67193F00F93653 /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8042A67193F00F93653 /* ScheduleService.swift */; };
 		1C98C8082A671AE700F93653 /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C98C8072A671AE700F93653 /* schedule.json */; };
 		1C98C80F2A67248900F93653 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C80E2A67248900F93653 /* EventModel.swift */; };
@@ -134,7 +134,7 @@
 		1C98C7FC2A67188200F93653 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		1C98C7FE2A6718BF00F93653 /* ScheduleCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCellScreen.swift; sourceTree = "<group>"; };
 		1C98C8002A6718E600F93653 /* ScheduleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCellViewModel.swift; sourceTree = "<group>"; };
-		1C98C8022A67191900F93653 /* ScheduleCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCustomTableViewCell.swift; sourceTree = "<group>"; };
+		1C98C8022A67191900F93653 /* ScheduleCustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		1C98C8042A67193F00F93653 /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
 		1C98C8072A671AE700F93653 /* schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule.json; sourceTree = "<group>"; };
 		1C98C80E2A67248900F93653 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
@@ -420,7 +420,7 @@
 			children = (
 				1C98C7F52A6717C000F93653 /* ViewModel */,
 				1C98C7F42A6717B700F93653 /* View */,
-				1C98C8022A67191900F93653 /* ScheduleCustomTableViewCell.swift */,
+				1C98C8022A67191900F93653 /* ScheduleCustomCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -971,7 +971,7 @@
 				1C98C81A2A67258300F93653 /* TableTrackTableViewCell.swift in Sources */,
 				1CD92A612A6AEC9600D1F598 /* DriverDetailViewController.swift in Sources */,
 				1C98C8232A67261800F93653 /* RaceLapsCellScreen.swift in Sources */,
-				1C98C8032A67191900F93653 /* ScheduleCustomTableViewCell.swift in Sources */,
+				1C98C8032A67191900F93653 /* ScheduleCustomCollectionViewCell.swift in Sources */,
 				1C98C8012A6718E600F93653 /* ScheduleCellViewModel.swift in Sources */,
 				1CE86BB32A61BA8D00B4022C /* Color.swift in Sources */,
 				1C06DCCB2A61B12400FD02FB /* AppDelegate.swift in Sources */,

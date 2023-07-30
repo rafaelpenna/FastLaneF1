@@ -14,7 +14,8 @@ class StandingsScreen: UIView {
     lazy var backButton: UIButton = {
        let backButton = UIButton()
         backButton.translatesAutoresizingMaskIntoConstraints = false
-        backButton.setImage(UIImage(named: "backButton"), for: .normal)
+        backButton.setImage(UIImage(systemName: "arrowshape.turn.up.backward"), for: .normal)
+        backButton.tintColor = .white
         return backButton
     }()
     
@@ -134,13 +135,13 @@ class StandingsScreen: UIView {
         NSLayoutConstraint.activate([
             
             circuitCountryLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            circuitCountryLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            circuitCountryLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 10),
             circuitCountryLabel.heightAnchor.constraint(equalToConstant: 35),
             
-            backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
-            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            backButton.heightAnchor.constraint(equalToConstant: 20),
-            backButton.widthAnchor.constraint(equalToConstant: 15),
+            backButton.centerYAnchor.constraint(equalTo: circuitCountryLabel.centerYAnchor),
+            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            backButton.heightAnchor.constraint(equalToConstant: 40),
+            backButton.widthAnchor.constraint(equalToConstant: 40),
             
             standingsButton.topAnchor.constraint(equalTo: circuitCountryLabel.bottomAnchor, constant: 15),
             standingsButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),

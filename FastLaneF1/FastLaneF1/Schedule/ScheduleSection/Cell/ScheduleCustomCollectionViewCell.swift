@@ -7,14 +7,14 @@
 
 import UIKit
 
-class ScheduleCustomTableViewCell: UITableViewCell {
+class ScheduleCustomCollectionViewCell: UICollectionViewCell {
     
     var viewModel: ScheduleCellViewModel?
-    static let identifier: String = String(describing: ScheduleCustomTableViewCell.self)
+    static let identifier: String = String(describing: ScheduleCustomCollectionViewCell.self)
     var screen: ScheduleCellScreen = ScheduleCellScreen()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         addElements()
         autoresizingFalse()
         configScreenConstraints()
@@ -38,7 +38,6 @@ class ScheduleCustomTableViewCell: UITableViewCell {
         screen.flagView.image = viewModel?.getCoutryFlag
         screen.roundLabel.text = "Round \(viewModel!.getRaceRound)"
         screen.countryLabel.text = viewModel?.getRaceCountry
-        screen.nameEventLabel.text = viewModel?.getRaceDescription
         screen.dayLabel.text = "\(viewModel?.startEventDay ?? "") - \(viewModel?.getRaceDay ?? "")"
         screen.monthLabel.text = viewModel?.getRaceMonth
     }

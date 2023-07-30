@@ -12,7 +12,8 @@ class DriverDetailScreen: UIView {
     lazy var backButton: UIButton = {
         let backButton = UIButton()
         backButton.translatesAutoresizingMaskIntoConstraints = false
-        backButton.setImage(UIImage(named: "backButton"), for: .normal)
+        backButton.setImage(UIImage(systemName: "arrowshape.turn.up.backward"), for: .normal)
+        backButton.tintColor = .white
         return backButton
     }()
     
@@ -99,12 +100,12 @@ class DriverDetailScreen: UIView {
         NSLayoutConstraint.activate([
             
             topTitleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            topTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            topTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 10),
             
-            backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
-            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            backButton.heightAnchor.constraint(equalToConstant: 20),
-            backButton.widthAnchor.constraint(equalToConstant: 15),
+            backButton.centerYAnchor.constraint(equalTo: topTitleLabel.centerYAnchor),
+            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            backButton.heightAnchor.constraint(equalToConstant: 40),
+            backButton.widthAnchor.constraint(equalToConstant: 40),
             
             backgroundDriverView.topAnchor.constraint(equalTo: topTitleLabel.bottomAnchor, constant: 25),
             backgroundDriverView.leadingAnchor.constraint(equalTo: leadingAnchor),

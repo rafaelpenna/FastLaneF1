@@ -32,31 +32,33 @@ class ScheduleViewController: UIViewController {
     }
 }
 
-extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
-        
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension ScheduleViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return racesViewModel.numberOfRows
     }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ScheduleCustomTableViewCell.identifier) as? ScheduleCustomTableViewCell
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ScheduleCustomCollectionViewCell.identifier, for: indexPath) as? ScheduleCustomCollectionViewCell
         cell?.setupCell(driver: racesViewModel.loadCurrentRace(indexPath: indexPath))
         let backgroundView = UIView()
         backgroundView.backgroundColor = .none
         cell?.selectedBackgroundView = backgroundView
-        return cell ?? UITableViewCell()
+        return cell ?? UICollectionViewCell()
     }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = StandingsViewController()
         self.navigationController?.pushViewController(vc, animated: true)
         vc.selectedRound = indexPath.row
         vc.circuitCountryNameLabel = racesViewModel.getRaceCountry(indexPath: indexPath)
     }
+//
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let vc = StandingsViewController()
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        vc.selectedRound = indexPath.row
+//        vc.circuitCountryNameLabel = racesViewModel.getRaceCountry(indexPath: indexPath)
+//    }
 }
 
 extension ScheduleViewController: ScheduleViewModelDelegate {
@@ -72,7 +74,7 @@ extension ScheduleViewController: ScheduleViewModelDelegate {
 extension ScheduleViewController: ScheduleViewModelProtocol {
     func reloadTableView() {
         DispatchQueue.main.async {
-            self.racesScreen?.infoRacesTableView.reloadData()
+            self.racesScreen?.infoRacesCollectionView.reloadData()
         }
     }
 }

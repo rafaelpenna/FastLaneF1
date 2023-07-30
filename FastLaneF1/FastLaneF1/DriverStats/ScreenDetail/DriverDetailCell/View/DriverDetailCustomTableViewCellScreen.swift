@@ -22,6 +22,7 @@ class DriverDetailCustomTableViewCellScreen: UIView {
         countryLabel.translatesAutoresizingMaskIntoConstraints = false
         countryLabel.font = UIFont.boldSystemFont(ofSize: 25)
         countryLabel.textColor = .white
+        countryLabel.numberOfLines = 0
         return countryLabel
     }()
     
@@ -87,6 +88,7 @@ class DriverDetailCustomTableViewCellScreen: UIView {
             
             countryLabel.topAnchor.constraint(equalTo: roundLabel.bottomAnchor, constant: 10),
             countryLabel.leadingAnchor.constraint(equalTo: roundLabel.leadingAnchor),
+            countryLabel.widthAnchor.constraint(equalToConstant: 140),
             
             positionTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             positionTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 10),
