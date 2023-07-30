@@ -31,9 +31,9 @@ class ScheduleCellViewModel {
         if (Int(String(data.date.suffix(2))) ?? 00) - 2 >= 10 {
             return String((Int(data.date.suffix(2)) ?? 00) - 2)
         } else if String(data.date.suffix(5)) == "04-02" {
-            return "03/31"
+            return "31"
         } else if String(data.date.suffix(5)) == "07-02" {
-            return "06/30"
+            return "30"
         } else {
             return String("\(0)\((Int(data.date.suffix(2)) ?? 00) - 2)")
         }
@@ -52,7 +52,11 @@ class ScheduleCellViewModel {
     }
     
     public var getRaceMonth: String {
-        if String(data.date.prefix(7)) == "2023-01" {
+        if String(data.date.suffix(5)) == "04-02" {
+           return "MAR-APR"
+        } else if String(data.date.suffix(5)) == "07-02" {
+            return "JUN-JUL"
+        } else if String(data.date.prefix(7)) == "2023-01" {
             return "JAN"
         } else if String(data.date.prefix(7)) == "2023-02" {
             return "FEB"
