@@ -11,16 +11,16 @@ class ChampionshipStandingsCell: UITableViewCell {
 
     static let identifier = String(describing: ChampionshipStandingsCell.self)
     
-    var championshipLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Championship Standings"
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 20)
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.layer.backgroundColor = UIColor.darkGray.cgColor
-        return label
+    var championshipButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 10
+        button.clipsToBounds = true
+        button.layer.borderWidth = 0.5
+        button.setBackgroundImage(UIImage(named: "standings"), for: .normal)
+        button.contentMode = .scaleAspectFill
+        button.layer.backgroundColor = UIColor.darkGray.cgColor
+        return button
     }()
     
     public func configure() {
@@ -30,7 +30,7 @@ class ChampionshipStandingsCell: UITableViewCell {
     }
     
     private func addSubviews() {
-        addSubview(championshipLabel)
+        addSubview(championshipButton)
     }
     
     private func backgroundColor() {
@@ -40,10 +40,10 @@ class ChampionshipStandingsCell: UITableViewCell {
     private func configConstraintsUpcomingEvent() {
         NSLayoutConstraint.activate([
                 
-            championshipLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            championshipLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            championshipLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            championshipLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
+            championshipButton.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            championshipButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            championshipButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            championshipButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
         ])
     }
 

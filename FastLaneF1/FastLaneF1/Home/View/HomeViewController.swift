@@ -78,7 +78,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 200
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 2 {
+            self.tabBarController?.selectedIndex = 1
+        } else if indexPath.row == 3 {
+            self.tabBarController?.selectedIndex = 3
+        }
+    }
 }
-
-

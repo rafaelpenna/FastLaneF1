@@ -85,21 +85,19 @@ class ConstructorCustomTableViewCellScreen: UIView {
             backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            positionLabel.topAnchor.constraint(equalTo: topAnchor, constant: 30),
+            positionLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -10),
             positionLabel.centerXAnchor.constraint(equalTo: leadingAnchor, constant: 40),
 
-            teamLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            teamLabel.topAnchor.constraint(equalTo: positionLabel.topAnchor),
             teamLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 75),
 
-            pointsLabel.topAnchor.constraint(equalTo: topAnchor, constant: 33),
+            pointsLabel.topAnchor.constraint(equalTo: teamLabel.bottomAnchor, constant: 5),
             pointsLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 75),
-            pointsLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             
-            ptsLabel.topAnchor.constraint(equalTo: topAnchor, constant: 30),
+            ptsLabel.bottomAnchor.constraint(equalTo: pointsLabel.bottomAnchor),
             ptsLabel.leadingAnchor.constraint(equalTo: pointsLabel.trailingAnchor, constant: 5),
-            ptsLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             
-            carImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 10),
+            carImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 20),
             carImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
             carImage.widthAnchor.constraint(equalToConstant: 200),
         ])

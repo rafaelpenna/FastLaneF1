@@ -17,14 +17,17 @@ class ScheduleScreen: UIView {
         label.font = UIFont.boldSystemFont(ofSize: 35)
         return label
     }()
+    
+    private let layout = UICollectionViewFlowLayout()
 
-    lazy var infoRacesTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.separatorStyle = .none
-        tableView.backgroundColor = .darkColorApp
-        tableView.register(ScheduleCustomTableViewCell.self, forCellReuseIdentifier: ScheduleCustomTableViewCell.identifier)
-        return tableView
+    lazy var infoRacesCollectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+//        tableView.separatorStyle = .none
+        collectionView.backgroundColor = .none
+        collectionView.frame = bounds
+        collectionView.register(ScheduleCustomCollectionViewCell.self, forCellWithReuseIdentifier: ScheduleCustomCollectionViewCell.identifier)
+        return collectionView
     }()
     
     override init(frame: CGRect) {
@@ -32,6 +35,7 @@ class ScheduleScreen: UIView {
         addElements()
         setBackgroundColor()
         configConstraints()
+        configLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -39,8 +43,15 @@ class ScheduleScreen: UIView {
     }
     
     private func addElements() {
-        addSubview(infoRacesTableView)
+        addSubview(infoRacesCollectionView)
         addSubview(racesHeaderLabel)
+    }
+    
+    private func configLayout() {
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 2
+        layout.itemSize = CGSize(width: 118, height: 140)
     }
     
     private func setBackgroundColor() {
@@ -48,9 +59,9 @@ class ScheduleScreen: UIView {
     }
     
     
-    public func setupTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){
-        infoRacesTableView.delegate = delegate
-        infoRacesTableView.dataSource = dataSource
+    public func setupTableViewProtocols(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource){
+        infoRacesCollectionView.delegate = delegate
+        infoRacesCollectionView.dataSource = dataSource
     }
 
     private func configConstraints(){
@@ -59,12 +70,10 @@ class ScheduleScreen: UIView {
             racesHeaderLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             racesHeaderLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            infoRacesTableView.topAnchor.constraint(equalTo: racesHeaderLabel.bottomAnchor, constant: 15),
-            infoRacesTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            infoRacesTableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            infoRacesTableView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
-            
-
+            infoRacesCollectionView.topAnchor.constraint(equalTo: racesHeaderLabel.bottomAnchor, constant: 15),
+            infoRacesCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            infoRacesCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            infoRacesCollectionView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
         ])
     }
 }
