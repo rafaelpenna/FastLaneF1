@@ -11,11 +11,16 @@ class UpcomingEventCell: UITableViewCell {
     
     static let identifier = String(describing: UpcomingEventCell.self)
     
-    var upcomingLabel: UIButton = {
-        let label = UIButton()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.layer.backgroundColor = UIColor.darkGray.cgColor
-        return label
+    var upcomingButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 10
+        button.clipsToBounds = true
+        button.layer.borderWidth = 0.5
+        button.setBackgroundImage(UIImage(named: "nextEvent"), for: .normal)
+        button.contentMode = .scaleAspectFill
+        button.layer.backgroundColor = UIColor.darkGray.cgColor
+        return button
     }()
     
     public func configure() {
@@ -25,7 +30,7 @@ class UpcomingEventCell: UITableViewCell {
     }
     
     private func addSubviews() {
-        addSubview(upcomingLabel)
+        addSubview(upcomingButton)
     }
     
     private func backgroundColor() {
@@ -35,10 +40,10 @@ class UpcomingEventCell: UITableViewCell {
     private func configConstraintsUpcomingEvent() {
         NSLayoutConstraint.activate([
                 
-            upcomingLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            upcomingLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            upcomingLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            upcomingLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
+            upcomingButton.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            upcomingButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            upcomingButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            upcomingButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
         ])
     }
 }

@@ -15,7 +15,7 @@ class TabBarViewController: UITabBarController {
         configTaBar()
     }
     
-    private func createNavigationController(for rootViewController: UIViewController, title: String, image: UIImage) -> UIViewController {
+    func createNavigationController(for rootViewController: UIViewController, title: String, image: UIImage, selectedIndex: Int) -> UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
@@ -30,10 +30,10 @@ class TabBarViewController: UITabBarController {
     
     private func setupTabBar() {
         viewControllers = [
-            createNavigationController(for: HomeViewController(), title: "Home", image: UIImage(systemName: "house") ?? UIImage()),
-            createNavigationController(for: ClassificationViewController(), title: "Standings", image: UIImage(systemName: "trophy.fill") ?? UIImage()),
-            createNavigationController(for: DriverStatsViewController(), title: "Drivers Stats", image: UIImage(systemName: "speedometer") ?? UIImage()),
-            createNavigationController(for: ScheduleViewController(), title: "Schedule", image: UIImage(systemName: "doc.text.magnifyingglass") ?? UIImage()),
+            createNavigationController(for: HomeViewController(), title: "Home", image: UIImage(systemName: "house") ?? UIImage(), selectedIndex: 0),
+            createNavigationController(for: ClassificationViewController(), title: "Standings", image: UIImage(systemName: "trophy.fill") ?? UIImage(), selectedIndex: 1),
+            createNavigationController(for: DriverStatsViewController(), title: "Drivers Stats", image: UIImage(systemName: "speedometer") ?? UIImage(), selectedIndex: 2),
+            createNavigationController(for: ScheduleViewController(), title: "Schedule", image: UIImage(systemName: "doc.text.magnifyingglass") ?? UIImage(), selectedIndex: 3),
         ]}
     
     private func configTaBar() {
@@ -44,7 +44,4 @@ class TabBarViewController: UITabBarController {
         tabBar.barTintColor = .black
         tabBar.isTranslucent = false
     }
-    
-
-
 }

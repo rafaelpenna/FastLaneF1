@@ -11,16 +11,16 @@ class ScheduleCell: UITableViewCell {
 
     static let identifier = String(describing: ScheduleCell.self)
     
-    var scheduleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Schedule"
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 20)
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.layer.backgroundColor = UIColor.darkGray.cgColor
-        return label
+    var scheduleButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 10
+        button.clipsToBounds = true
+        button.layer.borderWidth = 0.5
+        button.setBackgroundImage(UIImage(named: "schedule"), for: .normal)
+        button.contentMode = .scaleAspectFill
+        button.layer.backgroundColor = UIColor.darkGray.cgColor
+        return button
     }()
     
     public func configure() {
@@ -30,7 +30,7 @@ class ScheduleCell: UITableViewCell {
     }
     
     private func addSubviews() {
-        addSubview(scheduleLabel)
+        addSubview(scheduleButton)
     }
     
     private func backgroundColor() {
@@ -40,11 +40,10 @@ class ScheduleCell: UITableViewCell {
     private func configConstraintsUpcomingEvent() {
         NSLayoutConstraint.activate([
                 
-            scheduleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            scheduleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            scheduleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            scheduleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
+            scheduleButton.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            scheduleButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            scheduleButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            scheduleButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
         ])
     }
-
 }
