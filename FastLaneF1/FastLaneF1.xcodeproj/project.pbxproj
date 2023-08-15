@@ -18,9 +18,7 @@
 		1C5484682A658688000EB373 /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5484672A658688000EB373 /* GenericService.swift */; };
 		1C54846B2A658C94000EB373 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C54846A2A658C94000EB373 /* HomeTableViewCell.swift */; };
 		1C54846E2A658DEF000EB373 /* UpcomingEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C54846D2A658DEF000EB373 /* UpcomingEventCell.swift */; };
-		1C74BC432A65AEF00017F11D /* ChampionshipStandingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C74BC422A65AEF00017F11D /* ChampionshipStandingsCell.swift */; };
-		1C74BC452A65B0380017F11D /* LatestResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C74BC442A65B0380017F11D /* LatestResultCell.swift */; };
-		1C74BC472A65B2910017F11D /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C74BC462A65B2910017F11D /* ScheduleCell.swift */; };
+		1C74BC452A65B0380017F11D /* LastResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C74BC442A65B0380017F11D /* LastResultCell.swift */; };
 		1C782B332A6849D80018C5B4 /* ClassificationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782B322A6849D80018C5B4 /* ClassificationScreen.swift */; };
 		1C782B352A684EE00018C5B4 /* ClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782B342A684EE00018C5B4 /* ClassificationViewController.swift */; };
 		1C782B372A684F740018C5B4 /* ClassificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782B362A684F740018C5B4 /* ClassificationModel.swift */; };
@@ -34,6 +32,8 @@
 		1C782B4D2A685E930018C5B4 /* ConstructorCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782B4C2A685E930018C5B4 /* ConstructorCustomTableViewCell.swift */; };
 		1C782B4F2A685EE50018C5B4 /* ConstructorCustomTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782B4E2A685EE50018C5B4 /* ConstructorCustomTableViewCellScreen.swift */; };
 		1C782B512A685F090018C5B4 /* ConstructorCustomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782B502A685F090018C5B4 /* ConstructorCustomCellViewModel.swift */; };
+		1C9103EF2A826BCF00A1C4B0 /* DriverInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9103EE2A826BCF00A1C4B0 /* DriverInfoService.swift */; };
+		1C9103F12A826C4500A1C4B0 /* DriverInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9103F02A826C4500A1C4B0 /* DriverInfoModel.swift */; };
 		1C98C7F72A6717F400F93653 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C7F62A6717F400F93653 /* ScheduleModel.swift */; };
 		1C98C7F92A67183300F93653 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C7F82A67183300F93653 /* ScheduleViewController.swift */; };
 		1C98C7FB2A67185D00F93653 /* ScheduleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C7FA2A67185D00F93653 /* ScheduleScreen.swift */; };
@@ -60,12 +60,23 @@
 		1C98C82F2A67273500F93653 /* StandingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C82E2A67273500F93653 /* StandingsService.swift */; };
 		1C98C8312A67275200F93653 /* CircuitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98C8302A67275200F93653 /* CircuitService.swift */; };
 		1C98C8352A6728F200F93653 /* seasonCircuitInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C98C8342A6728F200F93653 /* seasonCircuitInfo.json */; };
+		1CC3148C2A7D474600E5AA0E /* LastResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3148B2A7D474600E5AA0E /* LastResultViewModel.swift */; };
+		1CCC014F2A7AE918008D5D92 /* LastResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC014E2A7AE918008D5D92 /* LastResultService.swift */; };
+		1CCC01512A7AE97C008D5D92 /* LastResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC01502A7AE97C008D5D92 /* LastResultModel.swift */; };
+		1CCC01552A7AF2EE008D5D92 /* LastResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC01542A7AF2EE008D5D92 /* LastResultViewController.swift */; };
+		1CCC01572A7AFD4F008D5D92 /* LastResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC01562A7AFD4F008D5D92 /* LastResultScreen.swift */; };
+		1CCC015C2A7AFE9F008D5D92 /* LastResultCustomTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC015B2A7AFE9F008D5D92 /* LastResultCustomTableViewCellScreen.swift */; };
+		1CCC015E2A7AFEE5008D5D92 /* LastResultCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC015D2A7AFEE5008D5D92 /* LastResultCustomTableViewCell.swift */; };
+		1CCC01602A7AFF4F008D5D92 /* LastResultCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC015F2A7AFF4F008D5D92 /* LastResultCellViewModel.swift */; };
 		1CCCE3062A6ACE0D008C6EC6 /* DriverStatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCCE3052A6ACE0D008C6EC6 /* DriverStatsViewModel.swift */; };
 		1CCCE3082A6ACF72008C6EC6 /* DriverStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCCE3072A6ACF72008C6EC6 /* DriverStatsViewController.swift */; };
 		1CCCE30B2A6AD33F008C6EC6 /* DriverStatsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCCE30A2A6AD33F008C6EC6 /* DriverStatsScreen.swift */; };
 		1CCCE30F2A6AD4A1008C6EC6 /* DriverStatsCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCCE30E2A6AD4A1008C6EC6 /* DriverStatsCustomTableViewCell.swift */; };
 		1CCCE3112A6AD4D6008C6EC6 /* DriverStatsCustomTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCCE3102A6AD4D6008C6EC6 /* DriverStatsCustomTableViewCellScreen.swift */; };
 		1CCCE3132A6AD4F7008C6EC6 /* DriverStatsCustomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCCE3122A6AD4F7008C6EC6 /* DriverStatsCustomCellViewModel.swift */; };
+		1CD3247A2A817F940042854F /* NextEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD324792A817F940042854F /* NextEventModel.swift */; };
+		1CD3247C2A8180410042854F /* NextEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD3247B2A8180410042854F /* NextEventService.swift */; };
+		1CD3247E2A8180C50042854F /* NextEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD3247D2A8180C50042854F /* NextEventViewModel.swift */; };
 		1CD92A5F2A6AEB5100D1F598 /* DriverDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92A5E2A6AEB5100D1F598 /* DriverDetailScreen.swift */; };
 		1CD92A612A6AEC9600D1F598 /* DriverDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92A602A6AEC9600D1F598 /* DriverDetailViewController.swift */; };
 		1CD92A632A6AED8200D1F598 /* DriversDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92A622A6AED8200D1F598 /* DriversDetailViewModel.swift */; };
@@ -112,9 +123,7 @@
 		1C5484672A658688000EB373 /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
 		1C54846A2A658C94000EB373 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		1C54846D2A658DEF000EB373 /* UpcomingEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventCell.swift; sourceTree = "<group>"; };
-		1C74BC422A65AEF00017F11D /* ChampionshipStandingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipStandingsCell.swift; sourceTree = "<group>"; };
-		1C74BC442A65B0380017F11D /* LatestResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestResultCell.swift; sourceTree = "<group>"; };
-		1C74BC462A65B2910017F11D /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		1C74BC442A65B0380017F11D /* LastResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastResultCell.swift; sourceTree = "<group>"; };
 		1C782B322A6849D80018C5B4 /* ClassificationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationScreen.swift; sourceTree = "<group>"; };
 		1C782B342A684EE00018C5B4 /* ClassificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationViewController.swift; sourceTree = "<group>"; };
 		1C782B362A684F740018C5B4 /* ClassificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationModel.swift; sourceTree = "<group>"; };
@@ -128,6 +137,8 @@
 		1C782B4C2A685E930018C5B4 /* ConstructorCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorCustomTableViewCell.swift; sourceTree = "<group>"; };
 		1C782B4E2A685EE50018C5B4 /* ConstructorCustomTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorCustomTableViewCellScreen.swift; sourceTree = "<group>"; };
 		1C782B502A685F090018C5B4 /* ConstructorCustomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorCustomCellViewModel.swift; sourceTree = "<group>"; };
+		1C9103EE2A826BCF00A1C4B0 /* DriverInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoService.swift; sourceTree = "<group>"; };
+		1C9103F02A826C4500A1C4B0 /* DriverInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoModel.swift; sourceTree = "<group>"; };
 		1C98C7F62A6717F400F93653 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 		1C98C7F82A67183300F93653 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		1C98C7FA2A67185D00F93653 /* ScheduleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleScreen.swift; sourceTree = "<group>"; };
@@ -154,12 +165,23 @@
 		1C98C82E2A67273500F93653 /* StandingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsService.swift; sourceTree = "<group>"; };
 		1C98C8302A67275200F93653 /* CircuitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitService.swift; sourceTree = "<group>"; };
 		1C98C8342A6728F200F93653 /* seasonCircuitInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = seasonCircuitInfo.json; sourceTree = "<group>"; };
+		1CC3148B2A7D474600E5AA0E /* LastResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastResultViewModel.swift; sourceTree = "<group>"; };
+		1CCC014E2A7AE918008D5D92 /* LastResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastResultService.swift; sourceTree = "<group>"; };
+		1CCC01502A7AE97C008D5D92 /* LastResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastResultModel.swift; sourceTree = "<group>"; };
+		1CCC01542A7AF2EE008D5D92 /* LastResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastResultViewController.swift; sourceTree = "<group>"; };
+		1CCC01562A7AFD4F008D5D92 /* LastResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastResultScreen.swift; sourceTree = "<group>"; };
+		1CCC015B2A7AFE9F008D5D92 /* LastResultCustomTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastResultCustomTableViewCellScreen.swift; sourceTree = "<group>"; };
+		1CCC015D2A7AFEE5008D5D92 /* LastResultCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastResultCustomTableViewCell.swift; sourceTree = "<group>"; };
+		1CCC015F2A7AFF4F008D5D92 /* LastResultCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastResultCellViewModel.swift; sourceTree = "<group>"; };
 		1CCCE3052A6ACE0D008C6EC6 /* DriverStatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStatsViewModel.swift; sourceTree = "<group>"; };
 		1CCCE3072A6ACF72008C6EC6 /* DriverStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStatsViewController.swift; sourceTree = "<group>"; };
 		1CCCE30A2A6AD33F008C6EC6 /* DriverStatsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStatsScreen.swift; sourceTree = "<group>"; };
 		1CCCE30E2A6AD4A1008C6EC6 /* DriverStatsCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStatsCustomTableViewCell.swift; sourceTree = "<group>"; };
 		1CCCE3102A6AD4D6008C6EC6 /* DriverStatsCustomTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStatsCustomTableViewCellScreen.swift; sourceTree = "<group>"; };
 		1CCCE3122A6AD4F7008C6EC6 /* DriverStatsCustomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStatsCustomCellViewModel.swift; sourceTree = "<group>"; };
+		1CD324792A817F940042854F /* NextEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventModel.swift; sourceTree = "<group>"; };
+		1CD3247B2A8180410042854F /* NextEventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventService.swift; sourceTree = "<group>"; };
+		1CD3247D2A8180C50042854F /* NextEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventViewModel.swift; sourceTree = "<group>"; };
 		1CD92A5E2A6AEB5100D1F598 /* DriverDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailScreen.swift; sourceTree = "<group>"; };
 		1CD92A602A6AEC9600D1F598 /* DriverDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailViewController.swift; sourceTree = "<group>"; };
 		1CD92A622A6AED8200D1F598 /* DriversDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversDetailViewModel.swift; sourceTree = "<group>"; };
@@ -230,6 +252,8 @@
 				1C782B2D2A6849480018C5B4 /* Classification */,
 				1CCCE2FD2A6ACC25008C6EC6 /* DriverStats */,
 				1C98C7EE2A67171200F93653 /* Schedule */,
+				1CCC01472A7AE842008D5D92 /* NextEvent */,
+				1CCC01482A7AE85C008D5D92 /* LastResult */,
 				1C06DCCA2A61B12400FD02FB /* AppDelegate.swift */,
 				1C06DCCC2A61B12400FD02FB /* SceneDelegate.swift */,
 				1C06DCD32A61B12500FD02FB /* Assets.xcassets */,
@@ -283,6 +307,9 @@
 				1C98C82E2A67273500F93653 /* StandingsService.swift */,
 				1C98C8302A67275200F93653 /* CircuitService.swift */,
 				1CD92A672A6AF1BA00D1F598 /* DriverDetailService.swift */,
+				1CCC014E2A7AE918008D5D92 /* LastResultService.swift */,
+				1CD3247B2A8180410042854F /* NextEventService.swift */,
+				1C9103EE2A826BCF00A1C4B0 /* DriverInfoService.swift */,
 				1C5484672A658688000EB373 /* GenericService.swift */,
 			);
 			path = Service;
@@ -300,10 +327,8 @@
 		1C54846C2A658DCB000EB373 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1C74BC442A65B0380017F11D /* LastResultCell.swift */,
 				1C54846D2A658DEF000EB373 /* UpcomingEventCell.swift */,
-				1C74BC442A65B0380017F11D /* LatestResultCell.swift */,
-				1C74BC422A65AEF00017F11D /* ChampionshipStandingsCell.swift */,
-				1C74BC462A65B2910017F11D /* ScheduleCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -571,6 +596,94 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		1CC3148A2A7D473300E5AA0E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1CC3148B2A7D474600E5AA0E /* LastResultViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1CCC01472A7AE842008D5D92 /* NextEvent */ = {
+			isa = PBXGroup;
+			children = (
+				1CCC01492A7AE89C008D5D92 /* Model */,
+				1CD324772A817E8C0042854F /* ViewModel */,
+			);
+			path = NextEvent;
+			sourceTree = "<group>";
+		};
+		1CCC01482A7AE85C008D5D92 /* LastResult */ = {
+			isa = PBXGroup;
+			children = (
+				1CCC01582A7AFE5D008D5D92 /* LastResultCell */,
+				1CCC014A2A7AE8A7008D5D92 /* Model */,
+				1CCC014B2A7AE8AF008D5D92 /* View */,
+				1CC3148A2A7D473300E5AA0E /* ViewModel */,
+			);
+			path = LastResult;
+			sourceTree = "<group>";
+		};
+		1CCC01492A7AE89C008D5D92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1CD324792A817F940042854F /* NextEventModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1CCC014A2A7AE8A7008D5D92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1CCC01502A7AE97C008D5D92 /* LastResultModel.swift */,
+				1C9103F02A826C4500A1C4B0 /* DriverInfoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1CCC014B2A7AE8AF008D5D92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CCC014D2A7AE8CA008D5D92 /* Screen */,
+				1CCC01542A7AF2EE008D5D92 /* LastResultViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1CCC014D2A7AE8CA008D5D92 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1CCC01562A7AFD4F008D5D92 /* LastResultScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		1CCC01582A7AFE5D008D5D92 /* LastResultCell */ = {
+			isa = PBXGroup;
+			children = (
+				1CCC015A2A7AFE78008D5D92 /* View */,
+				1CCC01592A7AFE6E008D5D92 /* ViewModel */,
+				1CCC015D2A7AFEE5008D5D92 /* LastResultCustomTableViewCell.swift */,
+			);
+			path = LastResultCell;
+			sourceTree = "<group>";
+		};
+		1CCC01592A7AFE6E008D5D92 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1CCC015F2A7AFF4F008D5D92 /* LastResultCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1CCC015A2A7AFE78008D5D92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CCC015B2A7AFE9F008D5D92 /* LastResultCustomTableViewCellScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1CCCE2FD2A6ACC25008C6EC6 /* DriverStats */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +770,14 @@
 			isa = PBXGroup;
 			children = (
 				1CCCE3122A6AD4F7008C6EC6 /* DriverStatsCustomCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1CD324772A817E8C0042854F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1CD3247D2A8180C50042854F /* NextEventViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -941,6 +1062,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CC3148C2A7D474600E5AA0E /* LastResultViewModel.swift in Sources */,
 				1CCCE3112A6AD4D6008C6EC6 /* DriverStatsCustomTableViewCellScreen.swift in Sources */,
 				1CD92A702A6AF8BC00D1F598 /* DriverDetailCustomCellViewModel.swift in Sources */,
 				1CCCE3062A6ACE0D008C6EC6 /* DriverStatsViewModel.swift in Sources */,
@@ -948,6 +1070,7 @@
 				1C98C7FB2A67185D00F93653 /* ScheduleScreen.swift in Sources */,
 				1CE86BB82A61BF6500B4022C /* HomeScreenView.swift in Sources */,
 				1C98C8112A6724A900F93653 /* EventViewModel.swift in Sources */,
+				1C9103EF2A826BCF00A1C4B0 /* DriverInfoService.swift in Sources */,
 				1C782B372A684F740018C5B4 /* ClassificationModel.swift in Sources */,
 				1C98C82B2A6726AA00F93653 /* StandingsTableViewCell.swift in Sources */,
 				1C782B332A6849D80018C5B4 /* ClassificationScreen.swift in Sources */,
@@ -958,11 +1081,13 @@
 				1CCCE3082A6ACF72008C6EC6 /* DriverStatsViewController.swift in Sources */,
 				1C98C7F72A6717F400F93653 /* ScheduleModel.swift in Sources */,
 				1C98C8212A6725F100F93653 /* CircuitLenghtCellScreen.swift in Sources */,
+				1CD3247E2A8180C50042854F /* NextEventViewModel.swift in Sources */,
 				1C98C80F2A67248900F93653 /* EventModel.swift in Sources */,
 				1C98C81D2A6725B600F93653 /* FirstGrandPrixCellScreen.swift in Sources */,
-				1C74BC432A65AEF00017F11D /* ChampionshipStandingsCell.swift in Sources */,
+				1CD3247C2A8180410042854F /* NextEventService.swift in Sources */,
 				1CD92A5F2A6AEB5100D1F598 /* DriverDetailScreen.swift in Sources */,
 				1C5484682A658688000EB373 /* GenericService.swift in Sources */,
+				1CCC014F2A7AE918008D5D92 /* LastResultService.swift in Sources */,
 				1C98C8052A67193F00F93653 /* ScheduleService.swift in Sources */,
 				1CD92A6C2A6AF85700D1F598 /* DriverDetailCustomTableViewCell.swift in Sources */,
 				1C782B352A684EE00018C5B4 /* ClassificationViewController.swift in Sources */,
@@ -972,6 +1097,7 @@
 				1CD92A612A6AEC9600D1F598 /* DriverDetailViewController.swift in Sources */,
 				1C98C8232A67261800F93653 /* RaceLapsCellScreen.swift in Sources */,
 				1C98C8032A67191900F93653 /* ScheduleCustomCollectionViewCell.swift in Sources */,
+				1CD3247A2A817F940042854F /* NextEventModel.swift in Sources */,
 				1C98C8012A6718E600F93653 /* ScheduleCellViewModel.swift in Sources */,
 				1CE86BB32A61BA8D00B4022C /* Color.swift in Sources */,
 				1C06DCCB2A61B12400FD02FB /* AppDelegate.swift in Sources */,
@@ -979,14 +1105,17 @@
 				1C782B4D2A685E930018C5B4 /* ConstructorCustomTableViewCell.swift in Sources */,
 				1CD92A6E2A6AF89C00D1F598 /* DriverDetailCustomTableViewCellScreen.swift in Sources */,
 				1C782B392A684F9B0018C5B4 /* DriverStatsDriverViewModel.swift in Sources */,
+				1C9103F12A826C4500A1C4B0 /* DriverInfoModel.swift in Sources */,
 				1C98C81F2A6725D400F93653 /* TrackImageCellScreen.swift in Sources */,
 				1C782B402A6850420018C5B4 /* DriversCustomTableViewCell.swift in Sources */,
+				1CCC01512A7AE97C008D5D92 /* LastResultModel.swift in Sources */,
 				1C782B422A6850670018C5B4 /* DriverCustomCellViewModel.swift in Sources */,
 				1C782B3E2A68501D0018C5B4 /* DriversCustomTableViewCellScreen.swift in Sources */,
 				1C98C82F2A67273500F93653 /* StandingsService.swift in Sources */,
 				1CD92A682A6AF1BA00D1F598 /* DriverDetailService.swift in Sources */,
 				1C782B512A685F090018C5B4 /* ConstructorCustomCellViewModel.swift in Sources */,
 				1CE86BBC2A61C4C700B4022C /* TabBarViewController.swift in Sources */,
+				1CCC015E2A7AFEE5008D5D92 /* LastResultCustomTableViewCell.swift in Sources */,
 				1C98C7FF2A6718BF00F93653 /* ScheduleCellScreen.swift in Sources */,
 				1C54846E2A658DEF000EB373 /* UpcomingEventCell.swift in Sources */,
 				1C98C8272A67265300F93653 /* TrackRecordCellScreen.swift in Sources */,
@@ -994,13 +1123,16 @@
 				1C782B492A685CD60018C5B4 /* ConstructorService.swift in Sources */,
 				1C98C82D2A6726CF00F93653 /* CustomStandingsTableViewScreen.swift in Sources */,
 				1C98C8252A67263400F93653 /* RaceDistanceCellScreen.swift in Sources */,
+				1CCC01602A7AFF4F008D5D92 /* LastResultCellViewModel.swift in Sources */,
 				1C98C7FD2A67188200F93653 /* ScheduleViewModel.swift in Sources */,
-				1C74BC452A65B0380017F11D /* LatestResultCell.swift in Sources */,
+				1C74BC452A65B0380017F11D /* LastResultCell.swift in Sources */,
 				1C782B472A685C410018C5B4 /* ClassificationConstructorViewModel.swift in Sources */,
+				1CCC015C2A7AFE9F008D5D92 /* LastResultCustomTableViewCellScreen.swift in Sources */,
 				1CCCE3132A6AD4F7008C6EC6 /* DriverStatsCustomCellViewModel.swift in Sources */,
 				1C54846B2A658C94000EB373 /* HomeTableViewCell.swift in Sources */,
-				1C74BC472A65B2910017F11D /* ScheduleCell.swift in Sources */,
+				1CCC01552A7AF2EE008D5D92 /* LastResultViewController.swift in Sources */,
 				1CCCE30B2A6AD33F008C6EC6 /* DriverStatsScreen.swift in Sources */,
+				1CCC01572A7AFD4F008D5D92 /* LastResultScreen.swift in Sources */,
 				1C98C8162A67251500F93653 /* EventScreen.swift in Sources */,
 				1C06DCCD2A61B12400FD02FB /* SceneDelegate.swift in Sources */,
 				1CD92A632A6AED8200D1F598 /* DriversDetailViewModel.swift in Sources */,

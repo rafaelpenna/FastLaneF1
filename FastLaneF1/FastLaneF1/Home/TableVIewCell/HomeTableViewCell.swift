@@ -10,9 +10,11 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
     
     var upcomingCellScreen: UpcomingEventCell = UpcomingEventCell()
-    var latestResultCellScreen: LatestResultCell = LatestResultCell()
-    var championshipStandingsCellScreen: ChampionshipStandingsCell = ChampionshipStandingsCell()
-    var scheduleCellScreen: ScheduleCell = ScheduleCell()
+    var latestResultCellScreen: LastResultCell = LastResultCell()
+    
+    let nextEventViewModel: NextEventViewModel = NextEventViewModel()
+    
+    static let identifier: String = String(describing: HomeTableViewCell.self)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -25,8 +27,6 @@ class HomeTableViewCell: UITableViewCell {
     private func autoresizingFalse() {
         self.upcomingCellScreen.translatesAutoresizingMaskIntoConstraints = false
         self.latestResultCellScreen.translatesAutoresizingMaskIntoConstraints = false
-        self.championshipStandingsCellScreen.translatesAutoresizingMaskIntoConstraints = false
-        self.scheduleCellScreen.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder: NSCoder) {
@@ -36,12 +36,10 @@ class HomeTableViewCell: UITableViewCell {
     private func addElements() {
         self.contentView.addSubview(self.upcomingCellScreen)
         self.contentView.addSubview(self.latestResultCellScreen)
-        self.contentView.addSubview(self.championshipStandingsCellScreen)
-        self.contentView.addSubview(self.scheduleCellScreen)
     }
     
     private func backgroundColor() {
-        self.backgroundColor = .darkColorApp
+        self.backgroundColor = .black
     }
     
     private func configHomeTableViewConstraints(){
@@ -55,16 +53,6 @@ class HomeTableViewCell: UITableViewCell {
             latestResultCellScreen.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             latestResultCellScreen.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             latestResultCellScreen.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-            
-            championshipStandingsCellScreen.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            championshipStandingsCellScreen.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            championshipStandingsCellScreen.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            championshipStandingsCellScreen.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-            
-            scheduleCellScreen.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            scheduleCellScreen.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            scheduleCellScreen.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            scheduleCellScreen.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
         ])
     }
 }

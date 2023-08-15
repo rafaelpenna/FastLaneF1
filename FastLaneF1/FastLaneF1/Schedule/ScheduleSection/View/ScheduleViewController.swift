@@ -52,13 +52,6 @@ extension ScheduleViewController: UICollectionViewDelegate, UICollectionViewData
         vc.selectedRound = indexPath.row
         vc.circuitCountryNameLabel = racesViewModel.getRaceCountry(indexPath: indexPath)
     }
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = StandingsViewController()
-//        self.navigationController?.pushViewController(vc, animated: true)
-//        vc.selectedRound = indexPath.row
-//        vc.circuitCountryNameLabel = racesViewModel.getRaceCountry(indexPath: indexPath)
-//    }
 }
 
 extension ScheduleViewController: ScheduleViewModelDelegate {

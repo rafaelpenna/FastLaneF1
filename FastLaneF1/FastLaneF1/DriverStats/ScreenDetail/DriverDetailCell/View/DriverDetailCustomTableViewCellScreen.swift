@@ -12,7 +12,7 @@ class DriverDetailCustomTableViewCellScreen: UIView {
     lazy var roundLabel: UILabel = {
         let roundLabel = UILabel()
         roundLabel.translatesAutoresizingMaskIntoConstraints = false
-        roundLabel.font = UIFont.boldSystemFont(ofSize: 21)
+        roundLabel.font = UIFont.boldSystemFont(ofSize: 18)
         roundLabel.textColor = .red
         return roundLabel
     }()
@@ -20,7 +20,7 @@ class DriverDetailCustomTableViewCellScreen: UIView {
     lazy var countryLabel: UILabel = {
         let countryLabel = UILabel()
         countryLabel.translatesAutoresizingMaskIntoConstraints = false
-        countryLabel.font = UIFont.boldSystemFont(ofSize: 25)
+        countryLabel.font = UIFont.boldSystemFont(ofSize: 18)
         countryLabel.textColor = .white
         countryLabel.numberOfLines = 0
         return countryLabel
@@ -29,7 +29,7 @@ class DriverDetailCustomTableViewCellScreen: UIView {
     lazy var positionTitleLabel: UILabel = {
         let positionTitleLabel = UILabel()
         positionTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        positionTitleLabel.font = UIFont.systemFont(ofSize: 21)
+        positionTitleLabel.font = UIFont.systemFont(ofSize: 18)
         positionTitleLabel.textColor = .white
         positionTitleLabel.text = "Position:"
         return positionTitleLabel
@@ -38,7 +38,7 @@ class DriverDetailCustomTableViewCellScreen: UIView {
     lazy var positionLabel: UILabel = {
         let positionLabel = UILabel()
         positionLabel.translatesAutoresizingMaskIntoConstraints = false
-        positionLabel.font = UIFont.boldSystemFont(ofSize: 22)
+        positionLabel.font = UIFont.boldSystemFont(ofSize: 18)
         positionLabel.textColor = .white
         return positionLabel
     }()
@@ -46,7 +46,7 @@ class DriverDetailCustomTableViewCellScreen: UIView {
     lazy var pointsLabel: UILabel = {
         let pointsLabel = UILabel()
         pointsLabel.translatesAutoresizingMaskIntoConstraints = false
-        pointsLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        pointsLabel.font = UIFont.boldSystemFont(ofSize: 18)
         pointsLabel.textColor = .white
         return pointsLabel
     }()
@@ -55,7 +55,7 @@ class DriverDetailCustomTableViewCellScreen: UIView {
         let pointsUnitsLabel = UILabel()
         pointsUnitsLabel.text = "pts"
         pointsUnitsLabel.translatesAutoresizingMaskIntoConstraints = false
-        pointsUnitsLabel.font = UIFont.boldSystemFont(ofSize: 21)
+        pointsUnitsLabel.font = UIFont.boldSystemFont(ofSize: 18)
         pointsUnitsLabel.textColor = .white
         return pointsUnitsLabel
     }()
@@ -90,17 +90,17 @@ class DriverDetailCustomTableViewCellScreen: UIView {
             countryLabel.leadingAnchor.constraint(equalTo: roundLabel.leadingAnchor),
             countryLabel.widthAnchor.constraint(equalToConstant: 140),
             
-            positionTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            positionTitleLabel.centerYAnchor.constraint(equalTo: countryLabel.centerYAnchor),
             positionTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 10),
             
-            positionLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            positionLabel.centerYAnchor.constraint(equalTo: countryLabel.centerYAnchor),
             positionLabel.leadingAnchor.constraint(equalTo: positionTitleLabel.trailingAnchor, constant: 4),
 
-            pointsLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            pointsLabel.centerYAnchor.constraint(equalTo: countryLabel.centerYAnchor),
             pointsLabel.trailingAnchor.constraint(equalTo: ptsUnitLabel.leadingAnchor, constant: -5),
             
-            ptsUnitLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            ptsUnitLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            ptsUnitLabel.centerYAnchor.constraint(equalTo: countryLabel.centerYAnchor),
+            ptsUnitLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
         ])
     }
 }

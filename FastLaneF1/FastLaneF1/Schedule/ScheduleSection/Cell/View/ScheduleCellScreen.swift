@@ -87,18 +87,18 @@ class ScheduleCellScreen: UIView {
         NSLayoutConstraint.activate([
             
             flagView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            flagView.topAnchor.constraint(equalTo: monthLabel.bottomAnchor, constant: 2),
+            flagView.topAnchor.constraint(equalTo: monthLabel.bottomAnchor, constant: 7),
             flagView.widthAnchor.constraint(equalToConstant: 30),
             flagView.heightAnchor.constraint(equalToConstant: 30),
             
-            roundLabel.topAnchor.constraint(equalTo: topAnchor, constant: 2),
+            roundLabel.topAnchor.constraint(equalTo: topAnchor, constant: 7),
             roundLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            countryLabel.topAnchor.constraint(equalTo: flagView.bottomAnchor, constant: 2),
+            countryLabel.topAnchor.constraint(equalTo: flagView.bottomAnchor),
             countryLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             countryLabel.widthAnchor.constraint(equalToConstant: 105),
             
-            dayLabel.topAnchor.constraint(equalTo: roundLabel.bottomAnchor, constant: 2),
+            dayLabel.topAnchor.constraint(equalTo: roundLabel.bottomAnchor, constant: 7),
             dayLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             dayLabel.widthAnchor.constraint(equalToConstant: 90),
 

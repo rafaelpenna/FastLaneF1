@@ -51,7 +51,7 @@ class ScheduleScreen: UIView {
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 2
-        layout.itemSize = CGSize(width: 118, height: 140)
+        layout.itemSize = CGSize(width: 118, height: 160)
     }
     
     private func setBackgroundColor() {

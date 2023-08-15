@@ -5,18 +5,14 @@
 //  Created by Rafael Penna on 14/07/23.
 //
 
-enum HomeTableViewSection: Int {
-    case upcomingEvent
-    case latestResults
-    case championshipResults
-    case schedule
-}
-
 import UIKit
 
 class HomeViewController: UIViewController {
     
-    var homeScreen = HomeScreenView()
+    var homeScreen: HomeScreenView?
+    let nextEventViewModel: NextEventViewModel = NextEventViewModel()
+    let lastResultViewModel: LastResultViewModel = LastResultViewModel()
+
     
     override func loadView() {
         homeScreen = HomeScreenView()
@@ -25,64 +21,93 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        setupProtocols()
+        loadData()
+    }
+    
+    private func loadData() {
+        lastResultViewModel.fetchLastResult()
+        nextEventViewModel.fetchNextEvent()
         setupProtocols()
+    }
+    
+    private func setupProtocols() {
+        nextEventViewModel.delegate(delegate: self)
+        lastResultViewModel.delegate(delegate: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
     }
-    
-    private func setupProtocols() {
-        homeScreen.setupTableViewProtocols(delegate: self, dataSource: self)
-    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: UpcomingEventCell.identifier) as? UpcomingEventCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: LastResultCell.identifier, for: indexPath) as? LastResultCell
             cell?.configure()
+            cell?.delegate(delegate: self)
             let backgroundView = UIView()
             backgroundView.backgroundColor = .none
             cell?.selectedBackgroundView = backgroundView
+            cell?.circuitName.text = lastResultViewModel.circuitCountry
+            cell?.firstPlace.text = "Winner: \(lastResultViewModel.driverFirstPlace)"
+            cell?.flagCountryEvent.image = lastResultViewModel.countryLastEvent
             return cell ?? UITableViewCell()
         } else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: LatestResultCell.identifier) as? LatestResultCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: UpcomingEventCell.identifier, for: indexPath) as? UpcomingEventCell
             cell?.configure()
+            cell?.delegate(delegate: self)
             let backgroundView = UIView()
             backgroundView.backgroundColor = .none
             cell?.selectedBackgroundView = backgroundView
-            return cell ?? UITableViewCell()
-        } else if indexPath.row == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ChampionshipStandingsCell.identifier) as? ChampionshipStandingsCell
-            cell?.configure()
-            let backgroundView = UIView()
-            backgroundView.backgroundColor = .none
-            cell?.selectedBackgroundView = backgroundView
-            return cell ?? UITableViewCell()
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ScheduleCell.identifier) as? ScheduleCell
-            cell?.configure()
-            let backgroundView = UIView()
-            backgroundView.backgroundColor = .none
-            cell?.selectedBackgroundView = backgroundView
+            cell?.countryRaceName.text = nextEventViewModel.nameNextEvent
+            cell?.circuitName.text = nextEventViewModel.circuitNameNextEvent
+            cell?.flagCountryEvent.image = nextEventViewModel.countryNextEvent
+            cell?.dateEvent.text = nextEventViewModel.dateNextEvent
             return cell ?? UITableViewCell()
         }
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 300
+
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 2 {
-            self.tabBarController?.selectedIndex = 1
-        } else if indexPath.row == 3 {
-            self.tabBarController?.selectedIndex = 3
+}
+
+
+extension HomeViewController: NextEventViewModelDelegate, LastResultViewModelDelegate {
+    func success() {
+        homeScreen?.setupTableViewProtocols(delegate: self, dataSource: self)
+        nextEventReloadTableView()
+    }
+    func error(_ message: String) {
+    }
+}
+
+extension HomeViewController: NextEventViewModelProtocol {
+    func nextEventReloadTableView() {
+        DispatchQueue.main.async { [self] in
+            homeScreen?.homeTableView.reloadData()
+        }
+    }
+}
+extension HomeViewController: LastResultButtonTableViewCellProtocol{
+    func moreInformationActionButton() {
+        let vc = LastResultViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension HomeViewController: BuyTicketButtonTableViewCellProtocol{
+    func buyTicketActionButton() {
+        if let url = URL(string: "https://tickets.formula1.com/en") {
+            UIApplication.shared.open(url)
         }
     }
 }
