@@ -36,7 +36,7 @@ class DriverStatsCustomTableViewCellScreen: UIView {
     lazy var nameLabel: UILabel = {
         let nameLabel = UILabel()
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.font = UIFont.systemFont(ofSize: 21)
+        nameLabel.font = UIFont.systemFont(ofSize: 18)
         nameLabel.textColor = .white
         return nameLabel
     }()
@@ -44,7 +44,7 @@ class DriverStatsCustomTableViewCellScreen: UIView {
     lazy var lastNameLabel: UILabel = {
         let nameLabel = UILabel()
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.font = UIFont.boldSystemFont(ofSize: 21)
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
         nameLabel.textColor = .white
         return nameLabel
     }()
@@ -85,17 +85,17 @@ class DriverStatsCustomTableViewCellScreen: UIView {
             teamBackground.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             positionLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            positionLabel.centerXAnchor.constraint(equalTo: leadingAnchor, constant: 35),
+            positionLabel.centerXAnchor.constraint(equalTo: leadingAnchor, constant: 45),
 
             photoDriverImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             photoDriverImageView.leadingAnchor.constraint(equalTo: positionLabel.trailingAnchor, constant: 5),
             photoDriverImageView.heightAnchor.constraint(equalToConstant: 120),
             photoDriverImageView.widthAnchor.constraint(equalToConstant: 120),
 
-            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            nameLabel.leadingAnchor.constraint(equalTo: photoDriverImageView.trailingAnchor, constant: 40),
+            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 25),
+            nameLabel.leadingAnchor.constraint(equalTo: photoDriverImageView.trailingAnchor, constant: 30),
             
-            lastNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            lastNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 25),
             lastNameLabel.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 5),
             
             carImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 20),

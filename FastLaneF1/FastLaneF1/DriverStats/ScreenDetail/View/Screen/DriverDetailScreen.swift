@@ -60,7 +60,8 @@ class DriverDetailScreen: UIView {
     lazy var driversDetailTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.separatorStyle = .none
+        tableView.separatorColor = .white
+        tableView.separatorInset = .init(top: 0, left: 10, bottom: 0, right: 10)
         tableView.backgroundColor = .darkColorApp
         tableView.register(DriverDetailCustomTableViewCell.self, forCellReuseIdentifier: DriverDetailCustomTableViewCell.identifier)
         return tableView
