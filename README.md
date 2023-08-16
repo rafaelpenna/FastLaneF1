@@ -7,3 +7,5 @@ The main idea of the app was changed, e some functionalities were approached in 
 The app is created since the beggining in MVVM architeture, using the http://ergast.com/mrd API, and one of the objectives of the project is not use external libraries or frameworks. 
 
 Feel free to contribute for this project. This project there is no objective to eran money. This is just a project that pretend to be the best friend for F1 fans and in the future can expand to contain another categories in automobilistic world.
+
+![Group 12](https://github.com/rafaelpenna/FastLaneF1/assets/105522665/f1a7e658-64c6-428c-aa7c-dc3d4ac66828)
